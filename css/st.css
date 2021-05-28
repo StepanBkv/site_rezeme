@@ -1,0 +1,61 @@
+.wrapper {
+  max-width: 700px;
+  margin: auto;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.c-person {
+  min-width: 0;
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.c-person .h {
+  flex-grow: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-person .c-link {
+  min-width: 120px;
+  margin-left: auto;
+  text-align: end;
+}
+
+.c-person:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.c-person__avatar {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.c-link svg {
+  vertical-align: middle;
+}
+
+body {
+  background: #fafafa;
+  line-height: 1.5;
+  font-family: 'Arial';
+  padding: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}

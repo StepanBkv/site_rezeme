@@ -1,0 +1,39 @@
+@import "nullstyle.scss";
+body {
+	padding: 20px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;	
+
+	}
+	
+	.block {
+		border: 5px solid red;
+		max-width: 800px;
+		margin: 0px auto;
+		height: 800px;
+		position: relative;
+		& div {
+		line-height: 50px;
+		font-size: 18px;
+		font-weight: 700px;
+		text-align: center;
+	}
+
+	.block__1 {
+		background-color: #ece89d;
+	}
+	.block__2 {
+		background-color: #5e5373;
+		color: #fff;
+		position:absolute;
+		width: 100%;
+		top:100px;
+		left: 0px;
+		//relative мож ет использоваться с параметрами:
+		//left: ;top: ;right: ;bottom: ; z-index: ;
+	}  
+
+	
+	.block__3 {
+		background-color: #18b5a4;
+	}
+}
