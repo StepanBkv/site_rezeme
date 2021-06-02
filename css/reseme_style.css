@@ -74,35 +74,73 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-body {
-  padding: 20px;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.wrapper {
+  min-height: 100%;
+  padding: 50px;
 }
 
 .block {
-  border: 5px solid red;
   max-width: 800px;
-  margin: 0px auto;
-  height: 800px;
+  margin: 0 auto;
+}
+.block .block__item {
+  margin: 0px 0px 10px 0px;
+}
+.block .block__item .block__title {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  background-color: transparent;
+  color: green;
+  padding: 10px;
   position: relative;
 }
-.block div {
-  line-height: 50px;
-  font-size: 18px;
-  font-weight: 700px;
-  text-align: center;
+.block .block__item .block__text {
+  padding: 0 10px 10px;
+  line-height: 130%;
 }
-.block .block__1 {
-  background-color: #ece89d;
+
+.block_1 .block__item {
+  background-color: #77608d;
 }
-.block .block__2 {
-  background-color: #5e5373;
-  color: #fff;
+
+.block_2 .block__item {
+  background-color: #794f45;
+}
+
+.block_3 .block__item {
+  background-color: #7a956b;
+}
+
+.block._init .block__title {
+  cursor: pointer;
+}
+
+.block._init .block__title {
+  padding: 10px 40px 10px 10px;
+}
+
+.block._init .block__title::before,
+.block._init .block__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #000;
   position: absolute;
-  width: 100%;
-  top: 100px;
-  left: 0px;
+  right: 10px;
+  top: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
 }
-.block .block__3 {
-  background-color: #18b5a4;
+
+.block._init .block__title::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.block._init .block__title._active::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }

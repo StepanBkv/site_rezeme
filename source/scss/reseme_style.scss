@@ -1,39 +1,66 @@
 @import "nullstyle.scss";
-body {
-	padding: 20px;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;	
+.wrapper {
+  min-height: 100%;
+  padding: 50px;
+}
 
-	}
-	
-	.block {
-		border: 5px solid red;
-		max-width: 800px;
-		margin: 0px auto;
-		height: 800px;
-		position: relative;
-		& div {
-		line-height: 50px;
-		font-size: 18px;
-		font-weight: 700px;
-		text-align: center;
-	}
-
-	.block__1 {
-		background-color: #ece89d;
-	}
-	.block__2 {
-		background-color: #5e5373;
-		color: #fff;
-		position:absolute;
+.block {
+	max-width: 800px;
+	margin: 0 auto;
+	.block__item 
+	{
+	margin: 0px 0px 10px 0px;
+	.block__title {
 		width: 100%;
-		top:100px;
-		left: 0px;
-		//relative мож ет использоваться с параметрами:
-		//left: ;top: ;right: ;bottom: ; z-index: ;
-	}  
+		text-align: left;
+		font-size: 18px;
+		background-color: transparent;
+		color: green;
+		padding: 10px;
+		position: relative;
+	}
+	.block__text {
+		padding: 0 10px 10px;
+		line-height: 130%;
+				}	
+	}
+}
+
+.block_1 .block__item {
+	background-color: #77608d;
+}
+.block_2 .block__item {
+	background-color: #794f45;
+}
+.block_3 .block__item {
+	background-color: #7a956b;
+}
 
 	
-	.block__3 {
-		background-color: #18b5a4;
-	}
+.block._init .block__title {
+	cursor: pointer;
+}
+
+.block._init .block__title {
+	padding: 10px 40px 10px 10px;
+}
+
+.block._init .block__title::before, 
+.block._init .block__title::after {
+	content: "";
+	width: 20px;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	transition: transform 0.3s ease 0s;
+}
+
+.block._init .block__title::after {
+	transform: rotate(-90deg);
+}
+
+.block._init .block__title._active::after {
+	transform: rotate(0deg);
 }
