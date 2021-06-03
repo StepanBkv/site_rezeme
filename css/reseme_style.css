@@ -75,13 +75,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 .wrapper {
-  min-height: 100%;
   padding: 50px;
 }
 
 .block {
-  max-width: 800px;
-  margin: 0 auto;
+  margin: 0px 0px 30px 0px;
 }
 .block .block__item {
   margin: 0px 0px 10px 0px;
@@ -115,31 +113,26 @@ h1, h2, h3, h4, h5, h6 {
 .block._init .block__title {
   cursor: pointer;
 }
-
 .block._init .block__title {
   padding: 10px 40px 10px 10px;
 }
-
-.block._init .block__title::before,
-.block._init .block__title::after {
+.block._init .block__title::before, .block._init .block__title::after {
   content: "";
   width: 20px;
   height: 1px;
-  background-color: #000;
+  background-color: #fff;
   position: absolute;
-  right: 10px;
+  right: 10%;
   top: 20px;
-  -webkit-transition: -webkit-transform 0.3s ease 0s;
-  transition: -webkit-transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  -webkit-transition: -webkit-transform 1s ease 0s;
+  transition: -webkit-transform 1s ease 0s;
+  transition: transform 1s ease 0s;
+  transition: transform 1s ease 0s, -webkit-transform 1s ease 0s;
 }
-
 .block._init .block__title::after {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-
 .block._init .block__title._active::after {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);

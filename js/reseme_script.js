@@ -1,5 +1,6 @@
 "use strict"
 
+//собираем спойлеры
 const spollersArray = document.querySelectorAll('[data-spollers]')
 
 if(spollersArray.length > 0) {
@@ -10,7 +11,7 @@ if(spollersArray.length > 0) {
 	});
 
 	// Инициализация обычный спойлеров
-	if (spollersRegular.lenght > 0){
+	if (spollersRegular.length > 0){
 		initSpollers(spollersRegular);
 	}
 
@@ -20,12 +21,12 @@ if(spollersArray.length > 0) {
 	});
 
 	// Инициализация спойлеров с медиа запросами
-	if (spollersMedia.lenght > 0) {
+	if (spollersMedia.length > 0) {
 		const breakpointsArray = [];
 		spollersMedia.forEach(item => {
 			const params = item.dataset.spollers;
 			const breakpoint = [];
-			const paramsArray = params.split[","];
+			const paramsArray = params.split(",");
 			breakpoint.value = paramsArray[0];
 			breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
 			breakpoint.item = item;
@@ -119,7 +120,7 @@ if(spollersArray.length > 0) {
 		const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
 		if (spollerActiveTitle) {
 			spollerActiveTitle.classList.remove('_active');
-			_sliceUp(spollerActiveTitle.nextElementSibling, 500);
+			_slideUp(spollerActiveTitle.nextElementSibling, 500); 
 		}
 	}
 

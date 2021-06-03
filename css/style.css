@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   border-collapse: collapse;
 }
 .test_wrap table td, .test_wrap table th {
-  border: 1px dashed black;
+  border: 1px solid black;
   padding-left: 60px;
   text-align: center;
 }
@@ -269,4 +269,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #445162;
   font-size: 12px;
   letter-spacing: 0.3px;
+}
+
+.thisday {
+  background-color:red;
 }
