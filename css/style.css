@@ -73,6 +73,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+.wrapper {
+  min-height: 100%;
+}
+
 /*--------------------*/
 .wrapper {
   min-height: 100%;
@@ -236,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
   border-collapse: collapse;
 }
 .test_wrap table td, .test_wrap table th {
-  border: 1px solid black;
+  border: 1px dashed black;
   padding-left: 60px;
   text-align: center;
 }
@@ -269,8 +273,4 @@ h1, h2, h3, h4, h5, h6 {
   color: #445162;
   font-size: 12px;
   letter-spacing: 0.3px;
-}
-
-.thisday {
-  background-color:red;
 }

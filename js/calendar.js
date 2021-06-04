@@ -12,7 +12,7 @@ let calendar = setInterval(() => {
 
       let table = '<table><tr>';
       for(let i = 0; i < week_short.length; i++){
-      	table += `<th>${week_short[0]}</th>`;
+      	table += `<th>${week_short[i]}</th>`;
       }
   	  table += '</tr><tr>'
 
