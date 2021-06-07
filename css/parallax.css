@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .parallax__images {
-  position: absolute; 
+  position: absolute;
   width: 120%;
   height: 120%;
   top: -10%;
@@ -147,27 +147,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .images-parallax__clouds {
-  position: absolute;
-  width: 100%;
+  width: 130%;
   height: 100%;
-  background: url("../img/clouds.jpg") top / cover no-repeat;
-  z-index: 2;
+  background: url("../img/clouds.jpg") top/cover no-repeat;
+  top: 0;
 }
 
 .images-parallax__mountains {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background: url("../img/mountains.png") top / cover no-repeat;
-    z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/mountains.png") top/cover no-repeat;
+  z-index: 2;
+  right: 4%;
 }
 
 .images-parallax__human {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  background: url("../img/human.png") top / cover no-repeat;
-  z-index: 1;
+  left: 9%;
+  background: url("../img/human.png") top/cover no-repeat;
+  z-index: 3;
+  top: 50%;
 }
