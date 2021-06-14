@@ -1,130 +1,120 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Вёрстка</title>
+	<head>
+		<title>Вёрстка</title>
 
-	<meta name="viewport" content="width=device-width, inintial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		 <meta name="viewport" content="width=device-width, inintial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-	 <link rel="shortcut icon" href="img/apparatprezidenta2.ico" type="image/png">
+		 <link rel="shortcut icon" href="img/apparatprezidenta2.ico" type="image/png">
 
-	<link rel="stylesheet" href="css/style.css" />
-	
-	<meta charset="utf-8">
-</head>
-<body>
-	<div class="wrapper">
-		<div class="content">
-			<div class="hi">
-				<div class="container">
-					<div class="hi__row">
-						<div class="hi__body">
-							<div class="hi__title">
-								<h1>Бабаков Степан Евгеньевич</h1>
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="content">
+				<div class="hi">
+					<div class="container">
+						<div class="hi__row">
+							<div class="hi__body">
+								<div class="hi__title">
+									<h1>Бабаков Степан Евгеньевич</h1>
+								</div>
 							</div>
-						</div>
-						<div class="hi__image"> 
-							<img class ="hi__image" src="img/R2jASgaT2Z4.jpg" alt="main foto"> 
-						</div>
-						<div class="hi__time">
-							<div id = "time" class="time__write"> </div>
-							<div id = "date" class="date__write"> </div>
-						</div>
-					</div>
-				</div>
-			</div>	
-			
-			<div class="box__menu">
-				<div class="container">
-					<div class="nav">
-						<div class="nav__row">
-							<div id="mySide" class="nav_items">
-								<a href="#" class="nav__close" onclick='closeNav()'>&times;</a>
-								<a href="#">About</a>
-			                    <a href="#">Services</a>
-			                    <a href="#">Clients</a>
-			                    <a href="#">Contact</a>
+							<div class="hi__image"> 
+								<img class ="hi__image" src="img/R2jASgaT2Z4.jpg" alt="main foto"> 
 							</div>
-							<div class="nav__open">
-							<span onclick="openNav()">open</span>
+							<div class="hi__time">
+								<div id = "time" class="time__write"> </div>
+								<div id = "date" class="date__write"> </div>
 							</div>
 						</div>
 					</div>
+				</div>	
+				
+				<div class="box__menu">
+					<div class="container">
+						<div class="nav">
+							<div class="nav__row">
+								<div id="mySide" class="nav_items">
+									<a href="#" class="nav__close" onclick='closeNav()'>&times;</a>
+									<a href="#">About</a>
+				                    <a href="#">Services</a>
+				                    <a href="#">Clients</a>
+				                    <a href="#">Contact</a>
+								</div>
+								<div class="nav__open">
+								<span onclick="openNav()">open</span>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
 
-			<div class="box__content"> 
+				<div class="box__content"> 
+					<div class="container">
+						<div class = "batarey_row">
+						<div class = "batarey b1"></div>
+						<div class = "batarey b2"></div>
+						<div class = "batarey b3"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="box__news"> 
+					<div class="container">
+						<div class="link__sait"> <a target="_blank" href="https://kubsu.ru/" >Ссылка на сайт КубГУ</a> </div>
+					</div>
+				</div>
+
+				<div class="test__div">
+					<div class="container">
+						<div class="test_row">
+							<div id="calendar" class="test_wrap"></div>
+						</div>
+					</div>
+			</div>
+			<div class="input">
 				<div class="container">
-					<div class = "batarey_row">
-					<div class = "batarey b1"></div>
-					<div class = "batarey b2"></div>
-					<div class = "batarey b3"></div>
+					<div class="input__item">
+						<form action="/reseme.html?" method="get" enctype="multipart/form-data">
+						<div>
+							<select name="color" id="">
+								<option value="red">Красный</option>
+								<option value="green">Зелёный</option>
+								<option value="blue">Голубой</option>
+								<option value="brown">Коричневый</option>
+								<option selected value="black">Чёрный</option>
+							</select>
+						</div>
+						<button type="submit" >Нажми МУЖИК!!!</button>
+						</form>
+						<a href="reseme.html"> 
+	                  		<button> <span> Information </span> </button>
+					    </a>
+					    <a href="parallax.html"> 
+					    	<button> <span> Parallax </span> </button>
+					    </a>
+					    <a href="burger.html"> 
+					    	<button> <span> Burger </span> </button>
+					    </a>
 					</div>
 				</div>
 			</div>
+	 	</div>
 
-			<div class="box__news"> 
-				<div class="container">
-					<div class="link__sait"> <a target="_blank" href="https://kubsu.ru/" >Ссылка на сайт КубГУ</a> </div>
-				</div>
-			</div>
-
-			<div class="test__div">
-				<div class="container">
-					<div class="test_row">
-						<div id="calendar" class="test_wrap"></div>
-					</div>
-				</div>
-		</div>
-		<div class="input">
-			<div class="container">
-				<div class="input__item">
-					<form action="/reseme.html?" method="get" enctype="multipart/form-data">
-					<div>
-						<select name="color" id="">
-							<option value="red">Красный</option>
-							<option value="green">Зелёный</option>
-							<option value="blue">Голубой</option>
-							<option value="brown">Коричневый</option>
-							<option selected value="black">Чёрный</option>
-						</select>
-					</div>
-					<button type="submit" >Нажми МУЖИК!!!</button>
-					</form>
-					<a href="reseme.html"> <div class="container-contact100-form-btn">
-              			<div class="wrap-contact100-form-btn">
-                		<div class="contact100-form-bgbtn"></div>
-                  		<button class="contact100-form-btn">
-                    	<span>
-                    	Information
-                    	</span>
-                		</button>
-				        </div>
-				        </div>
-				    </a>
-				    <a href="parallax.html"> <div class="container-contact100-form-btn">
-              			<div class="wrap-contact100-form-btn">
-                		<div class="contact100-form-bgbtn"></div>
-                  		<button class="contact100-form-btn">
-                    	<span>
-                    	Parallax
-                    	</span>
-                		</button>
-				        </div>
-				        </div>
-				    </a>
-				</div>
-			</div>
-		</div>
- 	</div>
 		<footer class="footer"> 
-	    	<div class="container">
- 				<div class="footer__row"> 
- 					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
- 				</div>
-    		</div>
-      </footer>
-	</div>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script type="text/javascript" src="js/calendar.js"></script>
-</body>
+		    	<div class="container">
+	 				<div class="footer__row"> 
+	 					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
+	 				</div>
+	    		</div>
+	    </footer>
+	    
+		</div>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/calendar.js"></script>
+	</body>
 </html>
