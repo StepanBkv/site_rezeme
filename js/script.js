@@ -21,7 +21,7 @@ let time = setInterval(() => {
 		if (i < list.length - 1) str += ":"
 	}
 
-document.getElementById("time").innerHTML = str ;
+document.querySelector(".time__write").innerHTML = str ;
 }, 1000);
 
 
@@ -47,28 +47,90 @@ let date = setInterval(() => {
 
 		else str += list[i] + " "
 	}
-document.getElementById("date").innerHTML = str;
+document.querySelector(".date__write").innerHTML = str;
+
 }, 1000);
 
-let textOne = "fsdfsdfsdfllo!";
+const isMobile = {
+	Android: function () { 
+		return navigator.userAgent.match(/Android/i); 
+	},
+	BlackBerry: function () { 
+		return navigator.userAgent.match(/BlackBerry/i); 
+	},
+	iOS: function () { 
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i); 
+	},
+	Opera: function () { 
+		return navigator.userAgent.match(/Opera Mini/i); 
+	},
+	Windows: function () { 
+		return navigator.userAgent.match(/IEMobile/i); 
+	},
+	any: function () {
+		return (
+			isMobile.Android() ||
+			isMobile.BlackBerry() ||
+			isMobile.iOS() ||
+			isMobile.Opera() ||
+			isMobile.Windows());
+	}
+};
 
-//'your string'.replace(/\b\w/g, l => l.toUpperCase());
+if(isMobile.any()) {
+	document.body.classList.add('_touch');
 
-// Удаляем элемент
-let arr1 = ["Ваня", "Иштван", "Оля"];
-let resultOne = arr1.find((item, index, array) => item.age == 21);
-console.log(resultOne);
+	let menuArrows = document.querySelectorAll('.menu__arrow');
+	if(menuArrows.length > 0){
+		for(let index = 0; index < menuArrows.length; index++) {
+			const menuArrow = menuArrows[index];
+			menuArrow.addEventListener("click", function(e) {
+				menuArrow.parentElement.classList.toggle('_active');
+			});
+		}
+	}
+}
 
-let result = arr1.map((item, index, array) => item[0]);
-console.log(result);
+else {
+	document.body.classList.add('_pc');
+}
 
-// arr1.forEach((item, index, array) => console.log(`${item} находится на ${index} позиции в ${array}`));
+const iconMenu = document.querySelector('.menu__icon');
+const iconBody = document.querySelector('.menu__body');
+if(iconMenu) {
+	iconMenu.addEventListener("click", function(e){
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		iconBody.classList.toggle('_active');
+	});
+}
 
-let arr2 = [1, 2, 3, 4 ,5];
-let value = arr2.reduce((previousValue, item, index, array) => previousValue + item, 0);
-console.log(value);
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if (menuLinks.length > 0){
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
 
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+			
+			if(iconMenu.classList.contains('_active')){
+				document.body.classList.remove('_lock');
+				iconMenu.classList.remove('_active');
+				iconBody.classList.remove('_active');
+			}
 
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth",
+			});
+			e.preventDefault();
+		}
+	}
+}
 // Начиная с первой позиции (Иштван), до 2-й позиции "Оля" (не включая)
 // let arr2 = arr1.slice(0, 2);
 // console.log(arr2);

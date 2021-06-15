@@ -7,47 +7,49 @@ let calendar = setInterval(() => {
 	  let now = new Date();
 	  let year = now.getFullYear()
 	  let month = now.getMonth();; // месяцы в JS идут от 0 до 11, а не от 1 до 12
-      let d = new Date(year, month);
-      let week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
+    let d = new Date(year, month);
+    let week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
 
-      let table = '<table><tr>';
-      for(let i = 0; i < week_short.length; i++){
-      	table += `<th>${week_short[i]}</th>`;
-      }
-  	  table += '</tr><tr>'
+    let table = '<table><tr>';
 
-      // пробелы для первого ряда
-      // с понедельника до первого дня месяца
-      // * * * 1  2  3  4
+    for(let i = 0; i < week_short.length; i++){
+    	table += `<th>${week_short[i]}</th>`;
+    }
+	  table += '</tr><tr>'
 
-      for (let i = 0; i < getDay(d); i++) {
-        table += '<td>-</td>';
-      }
+    // пробелы для первого ряда
+    // с понедельника до первого дня месяца
+    // * * * 1  2  3  4
 
-      // <td> ячейки календаря с датами
+    for (let i = 0; i < getDay(d); i++) {
+      table += '<td>-</td>';
+    }
 
-      while (d.getMonth() == month) {
-      	if (now.getDate() == d.getDate()) table += '<td class="thisday">' + d.getDate() + '</td>'
-      	else table += '<td>' + d.getDate() + '</td>';
+    // <td> ячейки календаря с датами
 
-        if (getDay(d) % 7 == 6) { 
-        // вс, последний день - перевод строки
-          table += '</tr><tr>';
-        }
+    while (d.getMonth() == month) {
+    	if (now.getDate() == d.getDate()) table += '<td class="this_day">' + d.getDate() + '</td>'
+    	else table += '<td>' + d.getDate() + '</td>';
 
-        d.setDate(d.getDate() + 1);
+      if (getDay(d) % 7 == 6) { 
+      // вс, последний день - перевод строки
+        table += '</tr><tr>';
       }
 
-      // добить таблицу пустыми ячейками, если нужно
-      // 29 30 31 * * * *
+      d.setDate(d.getDate() + 1);
+    }
 
-      if (getDay(d) != 0) {
-        for (let i = getDay(d); i < 7; i++) {
-        	table += '<td>-</td>';
-        }
+    // добить таблицу пустыми ячейками, если нужно
+    // 29 30 31 * * * *
+
+    if (getDay(d) != 0) {
+      for (let i = getDay(d); i < 7; i++) {
+      	table += '<td>-</td>';
       }
+    }
 
-      // закрыть таблицу
-      table += '</tr></table>';
-      document.getElementById("calendar").innerHTML = table;
+    // закрыть таблицу
+    table += '</tr></table>';
+    document.querySelector(".calendar__item").innerHTML = table;
+   
 }, 500);
