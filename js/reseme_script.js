@@ -1,7 +1,7 @@
 "use strict"
 
 //собираем спойлеры
-const spollersArray = document.querySelectorAll('[data-spollers]')
+const spollersArray = document.querySelectorAll('[data-spollers]');
 
 if(spollersArray.length > 0) {
 
@@ -65,7 +65,7 @@ if(spollersArray.length > 0) {
 	}
 
 	// Инициализация 
-	function initSpollers(spollersArray, matchMedia = false) {
+	function initSpollers(spollersArray, matchMedia = false) { 
 		spollersArray.forEach(spollersBlock => {
 			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
 			if ( matchMedia.matches || !matchMedia) {
@@ -84,14 +84,15 @@ if(spollersArray.length > 0) {
 	//Работа с контентом
 	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
 		const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
-		if (spollerTitles.length > 0){
+		if (spollerTitles.length > 0) {
 			spollerTitles.forEach(spollerTitle => {
-				if (hideSpollerBody){
+				if (hideSpollerBody) {
 					spollerTitle.removeAttribute('tabindex');
-					if(!spollerTitle.classList.contains('_active')){
+					if (!spollerTitle.classList.contains('_active')) {
 						spollerTitle.nextElementSibling.hidden = true;
-					}
-					}else {
+						}
+					} 
+					else {
 						spollerTitle.setAttribute('tabindex', '-1');
 						spollerTitle.nextElementSibling.hidden = false;
 					}

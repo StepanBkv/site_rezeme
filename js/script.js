@@ -1,16 +1,5 @@
  "use strict";
 
- /* Установите ширину боковой навигации до 200 пикселей */
-function openNav() {
-    document.getElementById("mySide").style.cssText = `justify-content: space-between;`;
-}
-
-/* Установите ширину боковой навигации в 0 */
-function closeNav() {
-    document.getElementById("mySide").style.justifyContent = "none";
-    document.getElementById("mySide").style.flexDirection = "row";
-}			
-
 let time = setInterval(() => {
 	const date = new Date();
 	let list = [date.getHours(), date.getMinutes(), date.getSeconds()]
@@ -131,86 +120,153 @@ if (menuLinks.length > 0){
 		}
 	}
 }
-// Начиная с первой позиции (Иштван), до 2-й позиции "Оля" (не включая)
-// let arr2 = arr1.slice(0, 2);
-// console.log(arr2);
-// console.log(arr1.indexOf("Иштван", 2));
-// console.log(arr1.includes('Иштван'б 1))
-// // Удаляем элемент и возвращаем его в переменную
-// let arr2 = ["Ваня", "Иштван", "Оля"];
-// let removed = arr2.splice(1, 1);
-// console.log(removed);
 
-// // Заменяем элементы
-// let arr3 = ["Ваня", "Иштван", "Оля"];
-// // Начиная с нулевой позиции (Ваня), заменяем один элемент
-// arr3.splice(0, 1, 'Коля');
-// console.log(arr3);
+const random = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-// // Добавляем элементы
-// let arr4 = ["Ваня", "Иштван", "Оля"];
-// // Начиная с первой позиции (перед "Иштван"), добавляем два элемента
-// arr4.splice(1, 0, "Коля", "Маша");
-// console.log(arr4);
+const childBlock = document.querySelector('.block__row');
+let colorArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+let changeColor = setInterval(() => {
+	let i = random(0, 4);
+	let color = '#';
+	for( let k = 0; k < 6; k++){
+		 color += String(colorArr[random(0, 15)]); 
+	}
+	childBlock.children[i].style.backgroundColor = color;
 
-// // Удаляем элемент
-// let arr5 = ["Ваня", "Иштван", "Оля"];
-// // Начиная с последней позиции (Оля), удаляем один элемент.
-// arr5.splice(-1, 1);
-// console.log(arr5);
+},150);
+
+/* 
+Вставляем новый элемент...
+
+...перед объектом
+textElement.before(newElement);
+...после объетом
+textElement.after(newElement);
+...внутрь и в начало объекта
+textElement.prepend(newElement);
+...внутрь и в конец объекта
+textElement.append(newElement);
+
+--before--
+<div class="added__text">
+--prepend--
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, earum!</p>
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, earum!</p>
+--append--
+</div>
+--after--
+____________________________________________________________________________
+textElement.insertAdjesentHTML(`одно из четырёх значений`, `текст HTML, 
+который вставится в текст документа, согласна переданному первому параметру`)
+
+...перед объектом
+beforebegin 
+...внутрь и в начало объекта
+afterbegin
+...внутрь и в конец объекта
+beforeend
+...после объекта
+afterend
+
+--beforebegin--
+<div class="added__text">
+--afterbegin--
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, earum!</p>
+	<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, earum!</p>
+--beforeend--
+</div>
+--afterend--
+
+textElement.insertAdjesentElement(`одно из четырёх значений`, `Элемент HTML`)
+*/
+
+const addedText = document.querySelector('.added__text');
+let newParagraph = " ";
+
+// while(newParagraph) {
+// 	newParagraph = prompt("Введите новый обзац: ")
+// 	console.log(newParagraph);
+// 		if(newParagraph){
+// 			const newElement = document.createElement('p');
+// 			console.log(newElement);
+// 			newElement.textContent = newParagraph;
+// 			addedText.prepend(newElement);
+// 		}
+// }
+
+function moveImgtoDiv() { 
+	if(!momeImgDiv.parentElement.classList.contains('_active'))
+		momeImgDiv.parentElement.classList.add('_active');
+	moveImgDiv.append(this);
+	this.removeEventListener('click', moveImgtoDiv);
+	if (document.querySelectorAll('.move__img__div .cards__row .cards__colomn').length == 3) {
+		const newArrImg = document.querySelectorAll('.move__img__div .cards__row .cards__colomn');
+		newArrImg.forEach(item => removeImgDiv.append(item));
+		newArrImg.forEach(item => item.addEventListener('click', moveImgtoDiv));
+		momeImgDiv.parentElement.classList.remove('_active');
+	}
+}
+
+const moveImgDiv = document.querySelector('.move__img__div .cards__row');
+const removeImgDiv = document.querySelector('.cards .cards__row');
+const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
+
+if (cardsColomnCollection.length > 0) {
+	cardsColomnCollection.forEach( item => {
+		item.addEventListener('click', moveImgtoDiv);
+	});
+}
+
+// async function awaitRemove(){
+// 	let timer = setInterval(() => {
+// 	if (document.querySelectorAll('.move__img__div .cards__row .cards__colomn').length == 3) return true;
+// 	}, 1000);
+// 	timer;
+// }
+
+// async function moveImg() {
+
+	// let result = setTimeout( () => cardsColomnCollection.forEach(item => removeImgDiv.append(item)), 5000);
+
+	// console.log(result);
+// }
+
+//const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
 
 
-// let arrTwo = [
-// 	"Коля",
-// 	{
-// 		type: "JS",
-// 		age: 36,
-// 	},
-// 	true,
-// 	function (){
-// 		console.log("Привет, я Коля!");
-// 	}
-// ];
+// if (cardsColomnCollection.length > 0) {
+	// const imgArray = Array.from(imgCollection).map(item =>{
+	// 	return item.children[0];
+	// });
+	// 
+	// 
+	// cardsColomnCollection.forEach( item => {
+	// 	item.addEventListener('click', moveImgtoDiv);
+	// });
 
-// console.log(arrTwo);
-// console.log(arrTwo[0]);
-// console.log(arrTwo[1]["type"]);
-// console.log(arrTwo[1]["age"]);
-// console.log(arrTwo[2]);
-// arrTwo[3]();
+	// cardsColomnCollection[0].addEventListener('click', moveImgtoDiv);
+	// cardsColomnCollection[1].addEventListener('click', moveImgtoDiv);
+	// cardsColomnCollection[2].addEventListener('click', moveImgtoDiv);
+	
+	// while(document.querySelectorAll('.move__img__div .cards__row .cards__colomn') != 3){
+	// let arrNewImg = document.querySelectorAll('.move__img__div .cards__row .cards__colomn');
+	// console.log(arrNewImg);
 
-// let matrix = [
-// 	[1, 2, 3],
-// 	[4, 5, 6],
-// 	[7, 8, 9],
-// ];
-// console.log(matrix);
-// console.log(matrix[0][1]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	// if(arrNewImg.childElementCount == 3){
+	// 		arrNewImg.forEach((item) => {
+	// 			item.onclick = null;
+	// });
+	//}	
+	// cardsColomnCollection.forEach( item => {
+	// 	item.addEventListener('click', moveImgtoDiv(item));
+	// });
+//  }
+// }
+// cardsImage.children[0].onclick = () =>{
+// 	cardsImage.children[0].style.cssText +=
+// 	`top: 50px;`
+// }
 
 

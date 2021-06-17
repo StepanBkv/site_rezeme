@@ -205,6 +205,7 @@ body._lock {
   overflow: hidden;
 }
 
+/* дата-спойлеры ****************************************************************************/
 .block {
   margin: 20px 0px 10px 0px;
 }
@@ -216,7 +217,7 @@ body._lock {
   text-align: left;
   font-size: 18px;
   background-color: transparent;
-  color: green;
+  color: #fff;
   padding: 10px;
   position: relative;
 }
@@ -257,6 +258,7 @@ body._lock {
           transform: rotate(0deg);
 }
 
+/* дата-спойлеры ****************************************************************************/
 .menu__sub-list {
   position: absolute;
   top: 100%;
@@ -452,57 +454,6 @@ body._lock {
           flex-grow: 1;
 }
 
-.link__sait a {
-  color: red;
-}
-.link__sait a:visited {
-  color: #666;
-}
-.link__sait a:active {
-  color: blue;
-}
-
-.nav {
-  /* Средние экраны */
-  /* Маленькие экраны */
-}
-.nav .nav_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  /* Это выравнивает элементы по правому краю вдоль основной оси */
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-@media (max-width: 800px) {
-  .nav .nav_items {
-    /* На средних экранах мы выравниваем меню по центру за счет равномерного распределения доступного пространства между элементами */
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-@media (max-width: 500px) {
-  .nav .nav_items {
-    /* На маленьких экранах мы меняем направление основной оси с горизонтального (строка) на вертикальное (колонка) */
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-.box__content {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .batarey {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -549,11 +500,124 @@ body._lock {
           box-shadow: inset 100px 0 green;
 }
 
+.box__news {
+  position: relative;
+}
+.box__news .text__block > p {
+  color: red;
+}
+
+.list {
+  font-size: 18px;
+}
+.list li {
+  margin: 0px 0px 10px 20px;
+  position: relative;
+  padding: 0px 0px 0px 17px;
+}
+.list li:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: red;
+}
+
+.block__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+}
+.block__row .block_1 {
+  background-color: #434321;
+}
+.block__row .block_2 {
+  background-color: #889543;
+}
+.block__row .block_3 {
+  background-color: #f24213;
+}
+.block__row .block_4 {
+  background-color: #a42321;
+}
+.block__row .block_5 {
+  background-color: #b54523;
+}
+.block__row .block_5:hover {
+  color: red;
+}
+
+.added__text {
+  font-size: 20px;
+  color: #5aaaa4;
+}
+
+.list {
+  -webkit-transition: all 3ms;
+  transition: all 3ms;
+  -o-transition: all 3ms linear;
+  -moz-transition: all 3ms linear;
+  -webkit-transition: all 3ms linear;
+}
+
+/* картинки в карточках*/
+.cards {
+  margin: 0px 0px 70px 0px;
+}
+
+.cards__row {
+  margin: 0px -15px 0px -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cards__colomn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+  padding: 0px 15px;
+}
+
+.cards__image {
+  margin: 0px 0px 20px 0px;
+  padding: 0px 0px 60% 0px;
+  overflow: hidden;
+  position: relative;
+}
+.cards__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.move__img__div {
+  width: 100%;
+  height: 100px;
+  margin: 30px 0px 0px 0px;
+  border: 4px groove #e34345;
+}
+.move__img__div._active {
+  height: 100%;
+}
+
 .calendar__item table {
   border-collapse: collapse;
 }
 .calendar__item table td, .calendar__item table th {
-  border: 1px dashed black;
+  border: 1px groove black;
   padding-left: 60px;
   text-align: center;
 }
@@ -563,10 +627,6 @@ body._lock {
 }
 .calendar__item table .this_day {
   background-color: red;
-}
-
-.input a {
-  display: block;
 }
 
 .footer {
