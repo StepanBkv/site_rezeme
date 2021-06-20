@@ -1,17 +1,14 @@
-"use strict"
+"use strict";
 
-//собираем спойлеры
 const spollersArray = document.querySelectorAll('[data-spollers]');
 
-if(spollersArray.length > 0) {
+if (spollersArray.length > 0) {
 
-	// Получение обычных спойлеров
-	const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
+	const spollersRegular = Array.from(spollersArray).filter(function(item, index, self) {
 		return !item.dataset.spollers.split(",")[0];
 	});
 
-	// Инициализация обычный спойлеров
-	if (spollersRegular.length > 0){
+	if (spollersRegular.length > 0) {
 		initSpollers(spollersRegular);
 	}
 
@@ -22,6 +19,7 @@ if(spollersArray.length > 0) {
 
 	// Инициализация спойлеров с медиа запросами
 	if (spollersMedia.length > 0) {
+
 		const breakpointsArray = [];
 		spollersMedia.forEach(item => {
 			const params = item.dataset.spollers;
@@ -64,69 +62,74 @@ if(spollersArray.length > 0) {
 		});
 	}
 
-	// Инициализация 
-	function initSpollers(spollersArray, matchMedia = false) { 
+	function initSpollers (spollersArray, matchMedia = false) {
+		const textAfter = document.querySelector('.text__after');
 		spollersArray.forEach(spollersBlock => {
 			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
-			if ( matchMedia.matches || !matchMedia) {
+			if ( matchMedia.mathes || !matchMedia) {
 				spollersBlock.classList.add('_init');
 				initSpollerBody(spollersBlock);
 				spollersBlock.addEventListener("click", setSpollerAction);
-			} 
+				textAfter.classList.add('_init');
+			}
 			else {
 				spollersBlock.classList.remove('_init');
 				initSpollerBody(spollersBlock, false);
-				spollersBlock.removeEventListener("click", setSpollerAction);
-				}
-		});
+				spollersBlock.removeEventListener('click', setSpollerAction);
+			}	
+		}); 
 	}
 
-	//Работа с контентом
 	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
 		const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
+		const textAfter = document.querySelector('.text__after');
 		if (spollerTitles.length > 0) {
 			spollerTitles.forEach(spollerTitle => {
 				if (hideSpollerBody) {
 					spollerTitle.removeAttribute('tabindex');
 					if (!spollerTitle.classList.contains('_active')) {
 						spollerTitle.nextElementSibling.hidden = true;
+					
 						}
 					} 
 					else {
 						spollerTitle.setAttribute('tabindex', '-1');
 						spollerTitle.nextElementSibling.hidden = false;
+						
 					}
 			});
 		}
 	}
 
+
 	function setSpollerAction(e){
+		const textAfter = document.querySelector('.text__after');
 		const el = e.target;
-		if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
+		if( el.hasAttribute('data-spoller') || el.closest('[data-spoller]') ) {
 			const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
 			const spollersBlock = spollerTitle.closest('[data-spollers]');
 			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
 			if (!spollersBlock.querySelectorAll('._slide').length) {
-				if(oneSpoller && !spollerTitle.classList.contains('_active')){
+				if (oneSpoller && !spollerTitle.classList.contains('_active')) {
 					hideSpollersBody(spollersBlock);
 				}
 				spollerTitle.classList.toggle('_active');
 				_slideToggle(spollerTitle.nextElementSibling, 500);
 			}
+			textAfter.classList.toggle('_init');
 			e.preventDefault();
 		}
 	}
 
 	function hideSpollersBody(spollersBlock) {
-		const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');
+		const spollerActiveTitle = spollersBlock.querySelectot('[data-spoller]._active');
 		if (spollerActiveTitle) {
 			spollerActiveTitle.classList.remove('_active');
-			_slideUp(spollerActiveTitle.nextElementSibling, 500); 
+			_slideUp(spollerActiveTitle.nextElementSibling, 500);
 		}
 	}
-} 
+}
 
-//******************************************************************************************************************************************************************************************
 //SlideToggle
 let _slideUp = (target, duration = 500) => {
 	if(!target.classList.contains('_slide')){
@@ -194,25 +197,3 @@ let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

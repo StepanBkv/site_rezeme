@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Вёрстка</title>
+<head>
+<title>Вёрстка</title>
 
-		 <meta name="viewport" content="width=device-width, inintial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+ <meta name="viewport" content="width=device-width, inintial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-		 <link rel="shortcut icon" href="img/apparatprezidenta2.ico" type="image/png">
+ <link rel="shortcut icon" href="img/apparatprezidenta2.ico" type="image/png">
 
-		<link rel="stylesheet" href="css/style.css" />
-		
-		<meta charset="utf-8">
-	</head>
+<link rel="stylesheet" href="css/style.css" />
 
+<meta charset="utf-8">
+</head>
 	<body>
 		<div class="wrapper">
 			<div class="content">
@@ -76,6 +75,9 @@
 												<li>
 													<a href="reseme.html" class="menu__link">Спойлер</a>
 												</li>
+												<li>
+													<a href="form.html" class="menu__link">Отправка формы на сервер</a>
+												</li>
 											</ul>
 										</nav>
 									</div>
@@ -86,9 +88,10 @@
 					<div class="box__content"> 
 						<div class="move__img__div">
 							<div class="cards__row">
-								
+
 							</div>
 						</div>
+
 						<div class="container">
 							<div data-spollers="" data-one-spoller class="block block_2">
 								<div class="block__item">
@@ -193,6 +196,12 @@
 					<div class="box__news"> 
 						<div class="container">
 							<div class="text__block">
+								<form onclick = "console.log('target = ' +  event.target.tagName+ ' this =' + this.tagName)">
+									<div id="MeElem" class="small" onclick="console.log(this.tagName)">
+										Мой элемент DIV
+										<p onclick="console.log(this.tagName)"> Параграф </p>	
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>

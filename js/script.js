@@ -196,22 +196,24 @@ let newParagraph = " ";
 // 		}
 // }
 
+const moveImgDiv = document.querySelector('.move__img__div .cards__row');
+const removeImgDiv = document.querySelector('.cards .cards__row');
+const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
+
 function moveImgtoDiv() { 
-	if(!momeImgDiv.parentElement.classList.contains('_active'))
-		momeImgDiv.parentElement.classList.add('_active');
+	if(!moveImgDiv.parentElement.classList.contains('_active'))
+		moveImgDiv.parentElement.classList.add('_active');
 	moveImgDiv.append(this);
 	this.removeEventListener('click', moveImgtoDiv);
 	if (document.querySelectorAll('.move__img__div .cards__row .cards__colomn').length == 3) {
 		const newArrImg = document.querySelectorAll('.move__img__div .cards__row .cards__colomn');
-		newArrImg.forEach(item => removeImgDiv.append(item));
-		newArrImg.forEach(item => item.addEventListener('click', moveImgtoDiv));
-		momeImgDiv.parentElement.classList.remove('_active');
+		setTimeout(() => {
+			newArrImg.forEach(item => removeImgDiv.append(item));
+			moveImgDiv.parentElement.classList.remove('_active');
+			newArrImg.forEach(item => item.addEventListener('click', moveImgtoDiv));
+		}, 2000);
 	}
 }
-
-const moveImgDiv = document.querySelector('.move__img__div .cards__row');
-const removeImgDiv = document.querySelector('.cards .cards__row');
-const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
 
 if (cardsColomnCollection.length > 0) {
 	cardsColomnCollection.forEach( item => {

@@ -1,13 +1,12 @@
 @import "nullstyle.scss";
 
-.wrapper{
-padding:50px;
-} 
+.wrapper {
+	padding: 50px;
+}
 
 .block {
 	margin: 0px 0px 30px 0px;
-	.block__item {
-	margin: 0px 0px 10px 0px;
+	.block__item{
 		.block__title {
 			width: 100%;
 			text-align: left;
@@ -18,31 +17,24 @@ padding:50px;
 			position: relative;
 		}
 		.block__text {
-			padding: 0 10px 10px;
+			padding: 0px 10px 10px;
 			line-height: 130%;
-		}	
+		}
 	}
 }
 
-.block_1 .block__item {
+.block__1 .block__item{
 	background-color: #77608d;
 }
-.block_2 .block__item {
-	background-color: #794f45;
-}
-.block_3 .block__item {
-	background-color: #7a956b;
-}
 
-	
-.block._init { 
+.block._init {
 	& .block__title {
 		cursor: pointer;
 	}
 
 	& .block__title {
 		padding: 10px 40px 10px 10px;
-		&::before, 
+		&::before,
 		&::after {
 			content: "";
 			width: 20px;
@@ -53,12 +45,19 @@ padding:50px;
 			top: 20px;
 			transition: transform 1s ease 0s;
 		}
-			&::after {
-				transform: rotate(-90deg);
-			}
-			
-			&._active::after {
-				transform: rotate(0deg);
-			}
+
+		&::after {
+			transform: rotate(-90deg);
+		}
+		&._active::after {
+			transform: rotate(0deg);
+		}
+	}
+}
+
+.text__after {
+	visibility: hidden;
+	&._init {
+		visibility: visible;
 	}
 }
