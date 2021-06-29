@@ -1,199 +1,171 @@
 "use strict";
 
-const spollersArray = document.querySelectorAll('[data-spollers]');
+function checked(){
+	if(!this.previousElementSibling.hasAttribute('checked'))
+		this.previousElementSibling.setAttribute('checked', "");
+	else this.previousElementSibling.removeAttribute('checked', "");
 
-if (spollersArray.length > 0) {
+}
 
-	const spollersRegular = Array.from(spollersArray).filter(function(item, index, self) {
-		return !item.dataset.spollers.split(",")[0];
+let optionsInput = document.querySelectorAll('.options__label');
+
+if (optionsInput.length > 0) {
+	optionsInput.forEach(item => {
+		item.addEventListener('click', checked);
 	});
+}
 
-	if (spollersRegular.length > 0) {
-		initSpollers(spollersRegular);
-	}
+//----------------------------------------------------------------------
 
-	// Получение спойлеров с медиа запросами 
-	const spollersMedia = Array.from(spollersArray).filter(function (item, index, self) {
-		return item.dataset.spollers.split(",")[0];
-	});
+document.addEventListener("DOMContentLoaded", function () {
+	const form = document.getElementById('form');
 
-	// Инициализация спойлеров с медиа запросами
-	if (spollersMedia.length > 0) {
-
-		const breakpointsArray = [];
-		spollersMedia.forEach(item => {
-			const params = item.dataset.spollers;
-			const breakpoint = [];
-			const paramsArray = params.split(",");
-			breakpoint.value = paramsArray[0];
-			breakpoint.type = paramsArray[1] ? paramsArray[1].trim() : "max";
-			breakpoint.item = item;
-			breakpointsArray.push(breakpoint);
-		});
-
-		// Получаем уникальные брейкпоинты
-		let mediaQueries = breakpointsArray.map(function (item) {
-			return '(' + item.type + "-width: " + item.value + "px)," + item.value + ',' + item.type;
-
-		});
-
-		mediaQueries = mediaQueries.filter(function (item, index, self) {
-			return self.indexOf(item) === index;
-		});
-
-		// Работаем с каждым брейкпоинтом
-		mediaQueries.forEach(breakpoint => {
-			const paramsArray = breakpoint.split(",");
-			const mediaBreakpoint = paramsArray[1];
-			const mediaType = paramsArray[2];
-			const matchMedia = window.matchMedia(paramsArray[0]);
-
-			// Объекты с нужным условием 
-			const spollersArray = breakpointsArray.filter(function (item){
-				if (item.value === mediaBreakpoint && item.type === mediaType) {
-					return true;
-				}
-			});
-			// Событие
-			 matchMedia.addListener(function () {
-			 	initSpollers(spollersArray, matchMedia);
-			 }); 
-			 initSpollers(spollersArray, matchMedia);
-		});
-	}
-
-	function initSpollers (spollersArray, matchMedia = false) {
-		const textAfter = document.querySelector('.text__after');
-		spollersArray.forEach(spollersBlock => {
-			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
-			if ( matchMedia.mathes || !matchMedia) {
-				spollersBlock.classList.add('_init');
-				initSpollerBody(spollersBlock);
-				spollersBlock.addEventListener("click", setSpollerAction);
-				textAfter.classList.add('_init');
+	form.addEventListener('submit', formSend);
+	async function formSend(e) {
+		e.preventDefault();
+		const forms = document.forms;
+		const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
+		let error = formValidate(form);
+		const elements = forms;
+		const values = {};
+		for (let i = 0; i < elements.length; i++) {
+			const formElement = elements[i];
+			const {name} = formElement;
+			if (name) {
+				const {value, type, checked} = formElement;
+				values[name] = isCheckboxOrRadio(type) ? checked : value;
 			}
-			else {
-				spollersBlock.classList.remove('_init');
-				initSpollerBody(spollersBlock, false);
-				spollersBlock.removeEventListener('click', setSpollerAction);
-			}	
-		}); 
-	}
+		}
+		// let formData = new URLSearchParams(new FormData(form)).toString();
 
-	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
-		const spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
-		const textAfter = document.querySelector('.text__after');
-		if (spollerTitles.length > 0) {
-			spollerTitles.forEach(spollerTitle => {
-				if (hideSpollerBody) {
-					spollerTitle.removeAttribute('tabindex');
-					if (!spollerTitle.classList.contains('_active')) {
-						spollerTitle.nextElementSibling.hidden = true;
-					
-						}
-					} 
-					else {
-						spollerTitle.setAttribute('tabindex', '-1');
-						spollerTitle.nextElementSibling.hidden = false;
-						
+		//formData.append('image', formImage.files[0]);
+
+		if(error === 0) {
+			form.classList.add('_sending');
+
+			let response = await fetch('form.php', {
+				method: 'POST',
+				headers: {
+		            'Content-Type': 'application/json'
+		        },
+				body: JSON.stringify(values)
+			});
+
+			if(response.ok) {
+				let result = await response.json();
+				alert(result.message);
+				formPreview.innerHTML = '';
+				form.reset();
+				form.classList.remove('_sending');
+				
+			} else {
+				alert("Ошибка");
+				console.log(formData);
+				form.classList.remove('_sending');
+			}
+		} else {
+			alert("Заполните обязательные поля");
+		}
+	}	
+
+	function formValidate(form) {
+		let error = 0;
+		let formReq = document.querySelectorAll('._req');
+
+		for (let i = 0; i < formReq.length; i++) {
+			const element = formReq[i];
+			formRemoveError(element);
+
+			if(element.classList.contains('_pass')){
+				if(!passwordTest(element, formReq[i+1])){
+					formAddError(element);
+					error++;
+				}
+			}
+			else if(element.classList.contains('_repass')){
+				  if(element.value === ""){
+						formAddError(element);
+						console.log("Поле пустое");
+						error++;
+						element.nextElementSibling.insertAdjacentHTML('afterbegin', '<p>Поле пустое*</p>');
 					}
-			});
-		}
-	}
-
-
-	function setSpollerAction(e){
-		const textAfter = document.querySelector('.text__after');
-		const el = e.target;
-		if( el.hasAttribute('data-spoller') || el.closest('[data-spoller]') ) {
-			const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
-			const spollersBlock = spollerTitle.closest('[data-spollers]');
-			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
-			if (!spollersBlock.querySelectorAll('._slide').length) {
-				if (oneSpoller && !spollerTitle.classList.contains('_active')) {
-					hideSpollersBody(spollersBlock);
-				}
-				spollerTitle.classList.toggle('_active');
-				_slideToggle(spollerTitle.nextElementSibling, 500);
+					else if (element.value !== document.querySelector('._pass').value) {
+						formAddError(element);
+						console.log("Пароли не совпадают");
+						error++;
+						element.nextElementSibling.insertAdjacentHTML('afterbegin', '<p>Пароли не совпадают*</p>');
+					}
 			}
-			textAfter.classList.toggle('_init');
-			e.preventDefault();
+
+			else if(element.classList.contains('_email')){
+				if (!emailTest(element)){
+					formAddError(element);
+					error++;
+				}
+			}
+			else if (element.getAttribute("type") === "checkbox" && element.checked === false) {
+				formAddError(element);
+				error++;
+			}
+			else{
+				if (element.value === '') {
+					formAddError(element);
+					error++;
+				}
+			}
+
 		}
+		return error;
 	}
 
-	function hideSpollersBody(spollersBlock) {
-		const spollerActiveTitle = spollersBlock.querySelectot('[data-spoller]._active');
-		if (spollerActiveTitle) {
-			spollerActiveTitle.classList.remove('_active');
-			_slideUp(spollerActiveTitle.nextElementSibling, 500);
+		function formAddError(input) {
+			input.parentElement.classList.add('_error');
+			input.classList.add('_error');
 		}
-	}
-}
 
-//SlideToggle
-let _slideUp = (target, duration = 500) => {
-	if(!target.classList.contains('_slide')){
-		target.classList.add('_slide');
-		target.style.travsitionProprty = 'height, margin, padding';
-		target.style.transitionDuration = duration + 'ms';
-		target.style.height = target.offsetHeight + 'px';
-		target.offsetHeight;
-		target.style.overflow = 'hidden';
-		target.style.height = 0;
-		target.style.paddingTop = 0;
-		target.style.paddingBottom = 0;
-		target.style.marginTop = 0;
-		target.style.marginBottom = 0;
-		window.setTimeout(() => {
-			target.hidden = true;
-			target.style.removeProperty('height');
-			target.style.removeProperty('padding-top');
-			target.style.removeProperty('padding-bottom');
-			target.style.removeProperty('margin-top');
-			target.style.removeProperty('margin-bottom');
-			target.style.removeProperty('overflow');
-			target.style.removeProperty('transition-duration');
-			target.style.removeProperty('transition-property');
-			target.classList.remove('_slide');
-			}, duration);
-	}
-}
-
-let _slideDown = (target, duration = 500) => {
-	if(!target.classList.contains('_slide')){
-		target.classList.add('_slide');
-		if(target.hidden) {
-			target.hidden = false;
+		function formRemoveError(input) {
+			input.parentElement.classList.remove('_error');
+			input.classList.remove('_error');
 		}
-		let height = target.offsetHeight;
-		target.style.overflow = 'hidden';
-		target.style.height = 0;
-		target.style.paddingTop = 0;
-		target.style.paddingBottom = 0;
-		target.style.marginTop = 0;
-		target.style.marginBottom = 0;
-		target.offsetHeight;
-		target.style.transitionProperty = "height, margin, padding";
-		target.style.transitionDuration = duration + 'ms';
-		target.style.height = height + 'px';
-		target.style.removeProperty('padding-top');
-		target.style.removeProperty('padding-bottom');
-		target.style.removeProperty('margin-top');
-		target.style.removeProperty('margin-bottom');
-		window.setTimeout(() => {
-			target.style.removeProperty('height');
-			target.style.removeProperty('overflow');
-			target.style.removeProperty('transition-duration');
-			target.style.removeProperty('transition-property');
-			target.classList.remove('_slide');
-		}, duration);
-	}
-}
 
-let _slideToggle = (target, duration = 500) => {
-	if (target.hidden) {
-		return _slideDown(target, duration);
-	} else {
-		return _slideUp(target, duration);
-	}
-}
+		function emailTest(element) {
+			return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(element.value);
+		}
+
+		function passwordTest(pass, repass) {
+			return pass.value === repass.value;
+		}
+
+		// Получаем инпут file в переменную
+		const formImage = document.querySelector('#formImage');
+		// Получаем div для превью в переменную
+		const formPreview = document.querySelector('#formPreview');
+
+
+		// Слушаем изменения в input file
+		formImage.addEventListener('change', () => {
+			uploadFile(formImage.files[0]);
+		});
+
+		function uploadFile(file) {
+			// проверяем тип файла
+			if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)){
+				alert('Разрешены только изображения.');
+				formImage.value = '';
+				return;
+			}
+			// проверяем размер файлф (< 2 МБ)
+			if (file.size > 2 * 1024 * 1024) {
+				alert ('Файл должен быть менее 2 МБ.');
+				return;
+			}
+			let reader = new FileReader();
+			reader.onload = function (e) {
+				formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+			};
+			reader.onerror = function (e) {
+				alert('Ошибка');
+			}
+			reader.readAsDataURL(file);
+		}
+});

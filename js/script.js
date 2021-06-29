@@ -271,4 +271,3 @@ if (cardsColomnCollection.length > 0) {
 // 	`top: 50px;`
 // }
 
-

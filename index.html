@@ -195,16 +195,41 @@
 
 					<div class="box__news"> 
 						<div class="container">
-							<div class="text__block">
-								<form onclick = "console.log('target = ' +  event.target.tagName+ ' this =' + this.tagName)">
-									<div id="MeElem" class="small" onclick="console.log(this.tagName)">
-										Мой элемент DIV
-										<p onclick="console.log(this.tagName)"> Параграф </p>	
+							<div class="block">
+								<div class="block__row">
+									<div class="block__column block__column_1">
+										<div class="block__item">1</div>
 									</div>
-								</form>
+
+									<div class="block__column block__column_2">
+										<div class="block__item">
+											<p>2</p>
+											<p>Более высокий блок</p>
+										</div>
+									</div>
+
+									<div class="block__column block__column_3">
+										<div class="block__item ">3</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
+					
+					<div data-spollers class="block block__1">
+						<div class="block__container">
+							<div class="block__item">
+								<button type="button" data-spoller class="block__title">Здесь зачёты (нажми на меня!)</button>
+								<div class="block__text">
+									<p>Зачёт по трансляторам.</p>
+					                <p>Зачёт по основам компьютерному моделированию.</p>
+					                <p>Зачёт по компьютерной безопасности.</p>
+								</div>
+							</div>
+						</div>
+						<div class="text__after"><p>Зачётов нет!((</p></div>
+					</div>	
+
 				</div>
 			</div>
 

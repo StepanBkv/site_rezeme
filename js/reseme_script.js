@@ -65,21 +65,24 @@ if(spollersArray.length > 0) {
 	}
 
 	// Инициализация 
-	function initSpollers(spollersArray, matchMedia = false) { 
+	function initSpollers (spollersArray, matchMedia = false) {
+		const textAfter = document.querySelector('.text__after');
 		spollersArray.forEach(spollersBlock => {
 			spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
-			if ( matchMedia.matches || !matchMedia) {
+			if ( matchMedia.mathes || !matchMedia) {
 				spollersBlock.classList.add('_init');
 				initSpollerBody(spollersBlock);
 				spollersBlock.addEventListener("click", setSpollerAction);
-			} 
+				textAfter.classList.add('_init');
+			}
 			else {
 				spollersBlock.classList.remove('_init');
 				initSpollerBody(spollersBlock, false);
-				spollersBlock.removeEventListener("click", setSpollerAction);
-				}
-		});
+				spollersBlock.removeEventListener('click', setSpollerAction);
+			}	
+		}); 
 	}
+
 
 	//Работа с контентом
 	function initSpollerBody(spollersBlock, hideSpollerBody = true) {
@@ -101,21 +104,24 @@ if(spollersArray.length > 0) {
 	}
 
 	function setSpollerAction(e){
+		const textAfter = document.querySelector('.text__after');
 		const el = e.target;
-		if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
+		if( el.hasAttribute('data-spoller') || el.closest('[data-spoller]') ) {
 			const spollerTitle = el.hasAttribute('data-spoller') ? el : el.closest('[data-spoller]');
 			const spollersBlock = spollerTitle.closest('[data-spollers]');
 			const oneSpoller = spollersBlock.hasAttribute('data-one-spoller') ? true : false;
 			if (!spollersBlock.querySelectorAll('._slide').length) {
-				if(oneSpoller && !spollerTitle.classList.contains('_active')){
+				if (oneSpoller && !spollerTitle.classList.contains('_active')) {
 					hideSpollersBody(spollersBlock);
 				}
 				spollerTitle.classList.toggle('_active');
 				_slideToggle(spollerTitle.nextElementSibling, 500);
 			}
+			textAfter.classList.toggle('_init');
 			e.preventDefault();
 		}
 	}
+
 
 	function hideSpollersBody(spollersBlock) {
 		const spollerActiveTitle = spollersBlock.querySelector('[data-spoller]._active');

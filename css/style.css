@@ -206,13 +206,13 @@ body._lock {
 }
 
 /* дата-спойлеры ****************************************************************************/
-.block {
+.block_2 {
   margin: 20px 0px 10px 0px;
 }
-.block .block__item {
+.block_2 .block__item {
   margin: 0px 0px 10px 0px;
 }
-.block .block__item .block__title {
+.block_2 .block__item .block__title {
   width: 100%;
   text-align: left;
   font-size: 18px;
@@ -221,7 +221,7 @@ body._lock {
   padding: 10px;
   position: relative;
 }
-.block .block__item .block__text {
+.block_2 .block__item .block__text {
   padding: 0 10px 10px;
   line-height: 130%;
 }
@@ -256,6 +256,85 @@ body._lock {
 .block._init .block__title._active::after {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+.block__1 {
+  margin: 0px 0px 30px 0px;
+}
+.block__1 .block__item {
+  max-width: 1200px;
+  padding: 20px;
+}
+.block__1 .block__item .block__title {
+  width: 100%;
+  text-align: left;
+  font-size: 25px;
+  background-color: transparent;
+  color: green;
+  margin: 0 0 10px 0;
+  position: relative;
+}
+.block__1 .block__item .block__title:focus {
+  -webkit-box-shadow: 0 0 15px #000;
+          box-shadow: 0 0 15px #000;
+}
+.block__1 .block__item .block__text {
+  padding: 0px 10px 10px;
+  line-height: 130%;
+}
+
+.block__1 .block__item {
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.block__1._init .block__title {
+  padding: 10px 40px 10px 10px;
+  cursor: pointer;
+}
+.block__1._init .block__title::before, .block__1._init .block__title::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #325252;
+  position: absolute;
+  right: 10%;
+  top: 20px;
+  -webkit-transition: -webkit-transform 1s ease 0s;
+  transition: -webkit-transform 1s ease 0s;
+  transition: transform 1s ease 0s;
+  transition: transform 1s ease 0s, -webkit-transform 1s ease 0s;
+}
+.block__1._init .block__title::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.block__1._init .block__title._active::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.text__after {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+  height: 65px;
+  margin-top: 50px;
+  -webkit-transition: visibility 0.2s ease 0s;
+  transition: visibility 0.2s ease 0s;
+}
+.text__after._init {
+  visibility: visible;
+}
+.text__after p {
+  color: red;
 }
 
 /* дата-спойлеры ****************************************************************************/
@@ -500,33 +579,7 @@ body._lock {
           box-shadow: inset 100px 0 green;
 }
 
-.box__news {
-  position: relative;
-}
-.box__news .text__block > p {
-  color: red;
-}
-
-.list {
-  font-size: 18px;
-}
-.list li {
-  margin: 0px 0px 10px 20px;
-  position: relative;
-  padding: 0px 0px 0px 17px;
-}
-.list li:before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 0;
-  border-radius: 50%;
-  height: 15px;
-  width: 15px;
-  background-color: red;
-}
-
-.block__row {
+.block_2 .block__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,22 +589,22 @@ body._lock {
   -webkit-transition: all 5s;
   transition: all 5s;
 }
-.block__row .block_1 {
+.block_2 .block__row .block_1 {
   background-color: #434321;
 }
-.block__row .block_2 {
+.block_2 .block__row .block_2 {
   background-color: #889543;
 }
-.block__row .block_3 {
+.block_2 .block__row .block_3 {
   background-color: #f24213;
 }
-.block__row .block_4 {
+.block_2 .block__row .block_4 {
   background-color: #a42321;
 }
-.block__row .block_5 {
+.block_2 .block__row .block_5 {
   background-color: #b54523;
 }
-.block__row .block_5:hover {
+.block_2 .block__row .block_5:hover {
   color: red;
 }
 
@@ -629,9 +682,34 @@ body._lock {
   background-color: red;
 }
 
-.box__news .text__block * {
-  border: 4px groove #e43324;
-  margin: 10px;
+.box__news .container {
+  height: 100%;
+  overflow: hidden;
+  min-width: 100%;
+  padding: 50px;
+}
+.box__news .block__row {
+  border: 20px solid #ece89d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 20px 0px;
+}
+.box__news .block__column_2 p {
+  font-size: 50px;
+}
+.box__news .block__column {
+  border: 20px solid #5e5373;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+.box__news .block__item {
+  background-color: #18b5a4;
+  padding: 50px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  height: 100%;
 }
 
 .footer {

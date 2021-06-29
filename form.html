@@ -10,19 +10,97 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div data-spollers class="block block__1">
-			<div class="block__item">
-				<button tabindex="-1" type="button" data-spoller class="block__title">Здесь сладости (нажми на меня!)</button>
-				<div class="block__text">
-					<p>Пироженное</p>
-	                <p>Мед</p>
-	                <p>Конфета</p>
+		<div class="form">
+			<form action="form.php" method="POST" id="form" class="form__body">
+				<h1 class="form__title">Отправка данных на почту</h1>
+				<div class="form__item">
+					<label for="formName" class="form__label">Имя*:</label>
+					<input type="text" id="formName" name="name" class="form__input _req">
 				</div>
-			</div>
+				<div class="form__item">
+					<label for="formPass" class="form__label">Пароль*:</label>
+					<input type="password" id="formPass" name="pass" class="form__input _req _pass">
+					<div class="error__item">
+						
+					</div>
+				</div>
+				<div class="form__item">
+					<label for="formRePass" class="form__label">Повторите пароль*:</label>
+					<input type="password" id="formRePass" name="repass" class="form__input _req _repass">
+					<div class="error__item">
+						
+					</div>
+				</div>
+				<div class="form__item">
+					<label for="formEmail" class="form__label">E-mail*:</label>
+					<input type="text" id="formEmail" name="email" class="form__input _req _email">
+				</div>
+				<div class="form__item">
+					<div class="form__label">Какой у вас любимый язык программирования?</div>
+					<div class="options">
+						<div class="options__item">
+							<input type="checkbox" name="progLeng" class="options__input">
+							<label for="formPHP" class="options__label"><span>PHP</span></label>
+						</div>
+						<div class="options__item">
+							<input type="checkbox" name="progLeng" class="options__input">
+							<label for="formPython" class="options__label"><span>Python</span></label>
+						</div>
+						<div class="options__item">
+							<input type="checkbox" name="progLeng" class="options__input">
+							<label for="formJS" class="options__label"><span>JS</span></label>
+						</div>
+						<div class="options__item">
+							<input type="checkbox" name="progLeng" class="options__input">
+							<label for="formRuby" class="options__label"><span>Ruby</span></label>
+						</div>
+						<div class="options__item">
+							<input type="checkbox" name="progLeng" class="options__input">
+							<label for="formCplus" class="options__label"><span>C++</span></label>
+						</div>
+						<div class="options__item">
+							<input type="checkbox" name="progLeng" class="options__input">
+							<label for="formCsharp" class="options__label"><span>C#</span></label>
+						</div>
+					</div>
+				</div>
+				<div class="form__item">
+					<label for="formMessage" class="form__label">Сообщение:</label>
+					<textarea name="message" id="formMessage" class="form__input"></textarea>
+				</div>
+				<div class="form__item">
+					<div class="form__label">Возраст: </div>
+					<select name="age" class="select">
+						<option value="от 0 до 18">Молой</option>
+						<option value="от 18 до 25" selected="selected">Молодой</option>
+						<option value="от 25 до 45">Старый</option>
+						<option value="от 45 до 70">Супер стар</option>
+						<option value="от 70">Мега стар</option>
+					</select>
+				</div>
+				<div class="form__item">
+					<div class="form__label">Прикрепить фото</div>
+					<div class="file">
+						<div class="file__item">
+							<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+							<div class="file__button">Выбрать</div>
+						</div>
+						<div id="formPreview" class="file__preview"></div>
+					</div>
+				</div>
+				<div class="form__item">
+					<div class="checkbox">
+						<input id="formAgreement" type="checkbox" checked name="agreement" class="checkbox__input _req">
+		                <label for="formAgreement" class="checkbox__label"><span>
+		                	Я даю своё согласие на обработку персональных данных в соответствии с <a href="#">Условиями*</a>
+		                </span>
+		                </label>
+					</div>
+				</div>
+				<button type="submit" class="form__button">Отправить</button>
+			</form>
 		</div>
-
-		<div class="text__after">Сладости закончились</div>
 	</div>
-	<script type="text/javascript" src="js/form.js" > </script>
+	<!--<script type="text/javascript" src="js/form.js" > </script> -->
 </body>
 </html>
