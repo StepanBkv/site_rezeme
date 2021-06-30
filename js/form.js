@@ -18,49 +18,35 @@ if (optionsInput.length > 0) {
 //----------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-	const form = document.getElementById('form');
-
+	const form = document.querySelector('#form');
 	form.addEventListener('submit', formSend);
+
 	async function formSend(e) {
 		e.preventDefault();
-		const forms = document.forms;
-		const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
 		let error = formValidate(form);
-		const elements = forms;
-		const values = {};
-		for (let i = 0; i < elements.length; i++) {
-			const formElement = elements[i];
-			const {name} = formElement;
-			if (name) {
-				const {value, type, checked} = formElement;
-				values[name] = isCheckboxOrRadio(type) ? checked : value;
-			}
-		}
-		// let formData = new URLSearchParams(new FormData(form)).toString();
 
-		//formData.append('image', formImage.files[0]);
-
+		let formData = new FormData(form);
+		formData.append('image', formImage.files[0]);
+		//formData = Object.fromEntries(formData.entries()); 
+		//console.log(formData['image']);
 		if(error === 0) {
 			form.classList.add('_sending');
-
-			let response = await fetch('form.php', {
+			let response = await fetch('sendmail.php', {
 				method: 'POST',
-				headers: {
-		            'Content-Type': 'application/json'
-		        },
-				body: JSON.stringify(values)
-			});
+				body: formData
+				});
 
 			if(response.ok) {
+
 				let result = await response.json();
 				alert(result.message);
 				formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
 				
-			} else {
+			}
+			else {
 				alert("Ошибка");
-				console.log(formData);
 				form.classList.remove('_sending');
 			}
 		} else {
