@@ -13,15 +13,12 @@
 			"Фамилия" => "Бабаков"
 		],
 	];
-	if(trim(!empty($_POST['phone']))){
-		$phone = $_POST['phone'];
-	}
-	foreach ($arr as $key => $value) {
-		if($key == $phone)
-			$message = "Приветствую вас ".$value['Имя']." ".$value['Фамилия']." !";
-	}
-	$response = ['message' => $message];
-	header('Content-type: application/json');
-	echo json_encode($response);
+	// echo $_POST['name']." ";
+	// echo $_POST['surname']." ";
+	// echo $_POST['phone'];
 
+	foreach ($arr as $key => $value) {
+		if($key == $_POST['phone'])
+			echo "Приветствую вас ".$value['Имя']." ".$value['Фамилия']." !";
+	}
 ?>

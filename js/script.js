@@ -182,19 +182,19 @@ afterend
 textElement.insertAdjesentElement(`одно из четырёх значений`, `Элемент HTML`)
 */
 
-const addedText = document.querySelector('.added__text');
-let newParagraph = " ";
+function appendText() {
+	const inputItem = this.previousElementSibling;
+	if(inputItem.value != ""){
+		const newElement = document.createElement('p');
+		newElement.textContent = inputItem.value;
+		this.closest('.append__item').after(newElement);
+	}
+}
 
-// while(newParagraph) {
-// 	newParagraph = prompt("Введите новый обзац: ")
-// 	console.log(newParagraph);
-// 		if(newParagraph){
-// 			const newElement = document.createElement('p');
-// 			console.log(newElement);
-// 			newElement.textContent = newParagraph;
-// 			addedText.prepend(newElement);
-// 		}
-// }
+const appendItem = document.querySelector('.append__item');
+const buttonAppend = appendItem.lastElementChild;
+buttonAppend.addEventListener('click', appendText);
+
 
 const moveImgDiv = document.querySelector('.move__img__div .cards__row');
 const removeImgDiv = document.querySelector('.cards .cards__row');

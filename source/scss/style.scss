@@ -486,10 +486,20 @@ body {
     }
 }
 
-.added__text {
+.append__text {
     font-size: 20px;
     color: #5aaaa4;
-
+    .input__item {
+        padding: 3px 4px 2px 4px;
+        width: 50%;
+    }
+    .button__append {
+        height: 25px;
+        padding: 3px 5px 2px 5px;
+        border: 1px solid black;
+        border-radius: 7%;
+        background-color: #a4bed4;
+    }
 }
 
 .list {
