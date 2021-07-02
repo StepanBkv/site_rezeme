@@ -227,12 +227,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
+    visibility: visible; 
     height: 65px;
     margin-top: 50px;
     transition: visibility 0.2s ease  0s;
     &._init {
-        visibility: visible;
+        visibility: hidden;
     }
     & p {
         color: red;
@@ -447,7 +447,6 @@ body {
     flex-wrap: wrap;    
 }
 
-
 .b1{
 
     box-shadow: inset 30px 0 red;
@@ -465,25 +464,6 @@ body {
     display: flex;
     justify-content: space-between;
     transition: all 5s; 
-
-    .block_1{
-        background-color: #434321;
-    }
-    .block_2{
-        background-color: #889543;
-    }
-    .block_3{
-        background-color: #f24213;
-    }
-    .block_4{
-        background-color: #a42321;
-    }
-    .block_5{
-        background-color: #b54523;
-        &:hover{
-            color: red;
-        }
-    }
 }
 
 .append__text {
@@ -573,47 +553,32 @@ body {
 }
  
 .box__news {
-    .container {
-      height: 100%;
-      overflow: hidden;
-      min-width: 100%;
-      padding: 50px;
-    }
-
-    .block {
-        
-    }
-
-    .block__row {
-        border: 20px solid #ece89d;
+    & .section__row {
+        margin: 20px -15px 0px;
         display: flex;
-        margin: 0px 0px 20px 0px;
-
-    }
-    .block__column_1 {
-       
-    }
-    .block__column_2 {
-        & p {
-            font-size: 50px;
-        }
     }
 
-    .block__column_3 {
+    & .section__colomn {
+        padding: 15px;
+        flex: 0 1 33.333%;
     }
-    .block__column {
-        border:  20px solid #5e5373;
-        flex-basis: 33%;
+    & .section__subtitle {
+        font-size: 25px;
+        text-align: center;
     }
 
-    .block__item {
-      background-color: #18b5a4;
-      padding: 50px;
-      font-size: 20px;
-      color:  #fff;
-      font-weight: 700;
-      height: 100%;
+    & .section__item_flex {
+        display: flex;
+        flex-direction: column;
+        margin:15px;
+        padding: 15px;
+        background-color: #432352;
     }
+    & .section__text {
+        font-size: 14px;
+        flex: 1 1 auto;
+    }
+
 }
 
 .footer {

@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 		formData.append('progLeng', values);
 		values = Object.assign({}, values);
-		console.log(values);
 		//formData.append('propLeng', querySelector())
 		//let values = Object.fromEntries(formData.entries());
 		//formData = Object.fromEntries(formData.entries()); 
@@ -50,9 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			let response = await fetch('form.php', {
 				method: 'POST',
 				body: formData,
-				processData: false
+				//processData: false
 				});
-			console.log(values);
 			if(response.ok) {
 				let result = await response.json();
 				alert(result.message);

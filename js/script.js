@@ -271,3 +271,8 @@ if (cardsColomnCollection.length > 0) {
 // 	`top: 50px;`
 // }
 
+let formTest = document.querySelector('.form__test');
+formTest.addEventListener('click', function(e) {
+	console.log(e.target, "  ", this)
+
+});

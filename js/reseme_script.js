@@ -137,7 +137,7 @@ if(spollersArray.length > 0) {
 let _slideUp = (target, duration = 500) => {
 	if(!target.classList.contains('_slide')){
 		target.classList.add('_slide');
-		target.style.travsitionProprty = 'height, margin, padding';
+		target.style.transitionProprty = 'height, margin, padding';
 		target.style.transitionDuration = duration + 'ms';
 		target.style.height = target.offsetHeight + 'px';
 		target.offsetHeight;
