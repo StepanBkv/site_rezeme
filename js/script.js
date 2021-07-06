@@ -270,9 +270,3 @@ if (cardsColomnCollection.length > 0) {
 // 	cardsImage.children[0].style.cssText +=
 // 	`top: 50px;`
 // }
-
-let formTest = document.querySelector('.form__test');
-formTest.addEventListener('click', function(e) {
-	console.log(e.target, "  ", this)
-
-});
