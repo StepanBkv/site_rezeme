@@ -111,11 +111,11 @@ body {
 }
 
 .rezeme {
+	margin: 0 0  0 30px;
 	width: 714px;
 	position: relative;
-	margin: 0 0  0 30px;
 	box-sizing: border-box;
-	
+
 	.title__version {
 		font-size: 1.4375rem;
 		font-weight: 500;
@@ -225,8 +225,7 @@ body {
 					&::before {
 						position: absolute;
 						top: 50%;
-						left: -3%;
-						
+						left: -7px;
 						content: "";
 						align-item:center;
 						display: block;
@@ -235,6 +234,36 @@ body {
 						width: 5px;
 					}
 				}
+			}
+		}
+	}
+}
+
+.hobby {
+	.hobby__title {
+		font-size: 1.4375rem;
+		font-weight: 500;
+		line-height: 1.75rem;
+	}
+	.hobby__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100%;
+		p {
+			display: block;
+			position: relative;
+			margin: 0 0 0 20px;
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: -7px;
+				content: "";
+				align-item:center;
+				display: block;
+				background-color: #000;
+				height: 2px;
+				width: 5px;
 			}
 		}
 	}
