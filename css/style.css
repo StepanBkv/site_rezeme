@@ -324,14 +324,14 @@ body._lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  visibility: visible;
+  visibility: hidden;
   height: 65px;
   margin-top: 50px;
   -webkit-transition: visibility 0.2s ease 0s;
   transition: visibility 0.2s ease 0s;
 }
 .text__after._init {
-  visibility: hidden;
+  visibility: visible;
 }
 .text__after p {
   color: red;

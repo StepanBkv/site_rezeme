@@ -22,6 +22,6 @@
 	}
 	$response = ['message' => $message];
 	header('Content-type: application/json');
-	echo json_encode($response);
-
+	// echo json_encode($response);
+	echo json_encode(array('location' => 'index.html'))
 ?>

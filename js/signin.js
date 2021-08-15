@@ -1,22 +1,5 @@
 "use strict";
 
-function checked(){
-	if(!this.previousElementSibling.hasAttribute('checked'))
-		this.previousElementSibling.setAttribute('checked', "");
-	else this.previousElementSibling.removeAttribute('checked', "");
-
-}
-
-let optionsInput = document.querySelectorAll('.options__label');
-
-if (optionsInput.length > 0) {
-	optionsInput.forEach(item => {
-		item.addEventListener('click', checked);
-	});
-}
-
-//----------------------------------------------------------------------
-
 document.addEventListener("DOMContentLoaded", function () {
 	const form = document.querySelector('#form');
 	form.addEventListener('submit', formSend);
@@ -24,32 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	async function formSend(e) {
 		e.preventDefault();
 		let error = formValidate(form);
-		const options = document.querySelectorAll('.options__input');
-		//const label = options.nextElementSibling;
-		//console.log(label);
-		//const isCheckboxOrRadio = type => ['checkbox', 'radio'].includes(type);
-
 		let formData = new FormData(form);
 		formData.append('image', formImage.files[0]);
-		let values = [];
-		options.forEach(option => {
-			let label = option.nextElementSibling;
-			if(option.hasAttribute('checked')){
-				console.log(label.innerText);
-				values.push(" " + label.innerText);
-			}
-		});
-		formData.append('progLeng', values);
-		values = Object.assign({}, values);
-		//formData.append('propLeng', querySelector())
-		//let values = Object.fromEntries(formData.entries());
-		//formData = Object.fromEntries(formData.entries()); 
 		if(error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch('form.php', {
+			let response = await fetch('signup.php', {
 				method: 'POST',
 				body: formData,
-				//processData: false
 				});
 			if(response.ok) {
 				let result = await response.json();
@@ -96,17 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
 						element.nextElementSibling.insertAdjacentHTML('afterbegin', '<p>Пароли не совпадают*</p>');
 					}
 			}
-
-			else if(element.classList.contains('_email')){
-				if (!emailTest(element)){
-					formAddError(element);
-					error++;
-				}
-			}
-			else if (element.getAttribute("type") === "checkbox" && element.checked === false) {
-				formAddError(element);
-				error++;
-			}
 			else{
 				if (element.value === '') {
 					formAddError(element);
@@ -138,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Получаем инпут file в переменную
 	const formImage = document.querySelector('#formImage');
+
 	// Получаем div для превью в переменную
 	const formPreview = document.querySelector('#formPreview');
 

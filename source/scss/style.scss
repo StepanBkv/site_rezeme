@@ -227,12 +227,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: visible;
+    visibility: hidden;
     height: 65px;
     margin-top: 50px;
     transition: visibility 0.2s ease  0s;
     &._init {
-        visibility: hidden;
+        visibility: visible;
     }
     & p {
         color: red;

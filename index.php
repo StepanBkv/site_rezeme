@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,7 +80,7 @@
 													<a href="reseme.html" class="menu__link">Спойлер</a>
 												</li>
 												<li>
-													<a href="form.html" class="menu__link">Отправка формы на сервер</a>
+													<a href="vendor/signup.html" class="menu__link">Авторизация</a>
 												</li>
 											</ul>
 										</nav>
@@ -247,7 +251,7 @@
 
 				</div>
 			</div>
-
+			
 			<footer class="footer">
  				<div class="footer__row"> 
  					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
