@@ -19,46 +19,26 @@
 		<div class="wrapper">
 			<div class="content">
 				<div class="page">
-					<div class="hi">
-						<div class="container">
-							<div class="hi__row">
-								<div class="hi__body">
-									<div class="hi__title">
-										<h1>Бабаков Степан Евгеньевич</h1>
-									</div>
-								</div>
-								<div class="hi__image"> 
-									<img class ="hi__image" src="img/R2jASgaT2Z4.jpg" alt="main foto"> 
-								</div>
-								<div class="hi__time">
-									<div class="time__write"> </div>
-									<div class="date__write"> </div>
-								</div>
-							</div>
-						</div>
-					</div>	
 					<div class="box__menu">
 						<div class="container">
 							<header class="header">
 								<div class="headear__container">
-									<a href="index.html" class="header__logo"></a>
+									<a href="http://localhost:80/" class="header__logo">
+											<img class ="icon__image" src="img/R2jASgaT2Z4.jpg" alt="main foto"> 
+									</a>
 									<div class="header__menu menu">
 										<div class="menu__icon">
 											<span></span>
 										</div>
 										<nav class="menu__body">
 											<ul class="menu__list">
-												<li> <a data-goto=".page__section_1" href="bio.html" class="menu__link">Biography</a> </li>
-												<li> <a data-goto=".page__section_2" href="#" class="menu__link">Service</a> </li>
-												<li> <a data-goto=".page__section_3" href="#" class="menu__link">Clients</a> </li>
+												<li> <a data-goto=".page__section_1" href="#" class="menu__link">Service</a> </li>
+												<li> <a data-goto=".page__section_2" href="#" class="menu__link">Clients</a> </li>
 												<li> <a data-goto=".page__section_3" href="#" class="menu__link">Contact</a> </li>
 												<li>
 													<a href="" class="menu__link">Страница №1</a> 
 													<span class="menu__arrow"></span>
 													<ul class="menu__sub-list">
-														<li>
-															<a href="bio.html" class="menu__sub-link">Biography</a>
-														</li>
 														<li>
 															<a href="#" class="menu__sub-link">Services</a>
 														</li>
@@ -71,16 +51,27 @@
 													</ul>
 												</li>
 												<li>
-													<a href="parallax.html" class="menu__link">Параллакс эффект</a>
+													<a href="vendor/signup.html" class="menu__link autor">Авторизация</a>
 												</li>
 												<li>
-													<a href="burger.html" class="menu__link">Бургер</a>
+													<a href="target.html" class="menu__link tasks">Задания</a>
 												</li>
 												<li>
-													<a href="reseme.html" class="menu__link">Спойлер</a>
+													<select class="change__lang">
+														<option value="en">EN</option>
+														<option value="ru">RU</option>
+													</select>
 												</li>
 												<li>
-													<a href="vendor/signup.html" class="menu__link">Авторизация</a>
+													<div class="menu__time">
+														<div class="time__write"> </div>
+														<div class="date__write"> </div>
+														<div class="calendar">
+															<div class="calendar__row">
+																<div class="calendar__item"></div>
+															</div>
+														</div>
+													</div>
 												</li>
 											</ul>
 										</nav>
@@ -90,165 +81,117 @@
 						</div>
 					</div>
 					
-					<div class="box__content"> 
-						<div class="move__img__div">
-							<div class="cards__row">
-
-							</div>
-						</div>
-
+					<div class="rezeme">
 						<div class="container">
-							<div data-spollers="" data-one-spoller class="block block_2">
-								<div class="block__item">
-									<button tabindex="-1" type="button" data-spoller class="block__title">Обычный спойлер №1</button>
-									 <div class="block__text">
-									 Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, hic adipisci maiores minus laudantium quaerat quia omnis eum obcaecati nesciunt ab pariatur, veniam a veritatis praesentium. Quam vero, placeat molestias?
-									 </div>
-								</div>
-
-								<div class="block__item">
-									<button tabindex="-1" type="button" data-spoller class="block__title">Обычный спойлер №2</button>
-									<div class="block__text">
-								 	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui blanditiis modi assumenda accusamus voluptatibus?
-									</div>
-								</div>
-
-								<div class="block__item">
-									<button tabindex="-1" type="button" data-spoller class="block__title">Обычный спойлер №3</button>
-									<div class="block__text">
-								 	Lorem ipsum dolor sit amet consectetur adipisicing elit. A sit esse et ex in alias dignissimos sunt provident, eaque iure?
-									</div>
-								</div>
-
-								<div class="block__item">
-									<button tabindex="1" type="button" data-spoller class="block__title">Батарейки</button>
-									<div class="block__text">
-									 	<div class = "batarey_row">
-											<div class = "batarey b1"></div>
-											<div class = "batarey b2"></div>
-											<div class = "batarey b3"></div>
-										</div>
-									</div>
-								</div>
-
-								<div class="block__item">
-									<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер с изменениями блока</button>
-									<div class="block__text">
-								 		<div class="block__row">
-								 			<div class="block__color_1">Это блок 1</div>
-								 			<div class="block__color_2">Это блок 2</div>
-								 			<div class="block__color_3">Это блок 3</div>
-								 			<div class="block__color_4">Это блок 4</div>
-								 			<div class="block__color_5">Это блок 5</div>
-								 		</div>
-									</div>
-								</div>
-
-								<div class="block__item">
-									<button tabindex="-1" type="button" data-spoller class="block__title">Спойлер с добавлением параграфов</button>
-									<div class="block__text">
-								 		<div class="append__text">
-								 			<div class="append__item">
-								 				<label for="itemInput" class="label__item">Введите новый параграф</label>
-								 				<input type="text" id="itemInput" class="input__item">
-								 				<button class="button__append">Добавить параграф</button>
-								 			</div>
-								 			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, earum!</p>
-								 			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, earum!</p>
-								 		</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="cards">
-								<div class="cards__row">
-
-									<div class="cards__colomn">
-										<div class="cards__item">
-											<div class="cards__image">	
-												<img src="img/sea_1.jpg" alt="sea_1">
+							<div class="rezeme__item">
+								<div class="rezeme__text">
+									<div class="hi__row">
+										<div class="hi__body">
+											<div class="hi__title">
+												<h1 class="hi__title">Бабаков Степан Евгеньевич</h1>
 											</div>
 										</div>
 									</div>
-
-									<div class="cards__colomn">
-										<div class="cards__item">
-											<div class="cards__image">	
-												<img src="img/sea_2.jpg" alt="sea_2">
-											</div>
+									<p class="title__version">Русская версия</p>
+									<div class="rezeme__title">
+										<div class="rezeme__row">
+											<p class="rezeme__old">
+												21 года (родился 29 декабря 1999), высшее образование
+											</p>
+											<p class="rezeme__city">
+												Краснодар
+											</p>
+											<p class="rezeme__agency">
+												Гражданство: Россия
+											</p>
 										</div>
-									</div>
 
-									<div class="cards__colomn">
-										<div class="cards__item">
-											<div class="cards__image">	
-												<img src="img/sea_3.jpeg" alt="sea_3">
-											</div>
+										<div class="rezeme__photo">
+											<img src="img/me__photo.jpeg" alt="">
 										</div>
-									</div>
 									
+									</div>
+
+									<div class="rezeme__body">
+										<div class="rezeme__header _inline__block">
+											<h1 class="post">
+												Программист-бэкендер
+											</h1>
+
+											<span class="redirect _inline__block">
+												Готов к командировкам
+											</span>
+
+											<span class="price _inline__block">
+												Пока без денег.
+											</span>
+										</div>
+
+										<div class="rezeme__main">
+											<div class="rezeme__block__1">
+												<div class="rezeme__item">
+													<span class="exper _inline__block">
+														Образование
+													</span>
+													<span class="exper__year _inline__block"> 3 год</span>
+												</div>
+
+												<div class="rezeme__row">
+													<div class="date">
+														<ul>
+															<li>
+																<div>
+																	<span class="exper__hier">
+																		Высшее образование
+																	</span>
+																</div>
+															</li>
+
+															<li>
+																<div>
+																	<span class="exper__now">
+																		Сентябрь 2018 - учусь сейчас
+																	</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+													
+													<div class="rezeme__item">
+														<p class="univer">Кубанский Государственный Университет</p>
+														<p class="facultet">Факультет: Компьютерные Технологии и Прикладная Математика</p>
+														<p class="way">Фундаментальная Информатика и Информационные Технологии</p>
+													</div>
+												</div>
+											</div>
+
+											<div class="rezeme__block__2">
+												<div class="rezeme__item">
+													<p class="rezeme__item__title"> Знания и навыки </p>
+													<p class="rezeme__item__subtitle">Профессиональные навыки</p>
+												</div>
+
+												<div class="rezeme__row">
+													<div class="rezeme__row__info">
+														<p class="rezeme__item__1">Опыт написания парсеров на Python.</p>
+														<p class="rezeme__item__2">Опыт написания небольших скритов на PHP.</p>
+														<p class="rezeme__item__3">Опыт работы с Nginx.</p>
+														<p class="rezeme__item__4">Знания модели OSI & TSP/IP.</p>
+														<p class="rezeme__item__5">Базовые знания HTML&CSS&JS.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
-
-					<div class="box__calendar">
-						<div class="container">
-							<div class="calendar__row">
-							    <div class="calendar">
-							    	<div class="calendar__item"></div>
-							    </div>
-							</div>
-						</div>
-					</div>
-
 					<div class="box__news"> 
 						<div class="container">
-							<div class="section__row">
-								<div class="section__column">
-									<div class="section__item_flex">
-										<div class="section__subtitle">Lorem, ipsum.</div>
-										<div class="section__text">
-										Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Atque vero nostrum nesciunt officia, aliquid perspiciatis provident dicta labore eaque illo nihil porro ipsum alias maxime unde? Id et, officia cupiditate?
-										</div>
-									</div>
-								</div>
-
-								<div class="section__column">
-									<div class="section__item_flex">
-										<div class="section__subtitle">Lorem, ipsum.</div>
-										<div class="section__text">
-										Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Atque vero nostrum nesciunt officia, aliquid perspiciatis provident dicta labore eaque illo nihil porro ipsum alias maxime unde? Id et, officia cupiditate?
-										</div>
-									</div>
-								</div>
-
-								<div class="section__column">
-									<div class="section__item_flex">
-										<div class="section__subtitle">Lorem, ipsum.</div>
-										<div class="section__text">
-										Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Atque vero nostrum nesciunt officia, aliquid perspiciatis provident dicta labore eaque illo nihil porro ipsum alias maxime unde? Id et, officia cupiditate?
-										</div>
-									</div>
-							</div>
 						</div>
 					</div>
-					
-					<div data-spollers class="block block__1">
-						<div class="block__container">
-							<div class="block__item">
-								<button type="button" data-spoller class="block__title">Здесь зачёты (нажми на меня!)</button>
-								<div class="block__text">
-									<p>Зачёт по трансляторам.</p>
-					                <p>Зачёт по основам компьютерному моделированию.</p>
-					                <p>Зачёт по компьютерной безопасности.</p>
-								</div>
-							</div>
-						</div>
-						<div class="text__after"><p>Зачётов нет!((</p></div>
-					</div>	
-
 				</div>
 			</div>
 			
@@ -257,7 +200,7 @@
  					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
  				</div>
 		    </footer>
-
+		    <script type="text/javascript" src="js/lang.js"></script>
 			<script type="text/javascript" src="js/script.js"></script>
 			<script type="text/javascript" src="js/calendar.js"></script>
 			<script type="text/javascript" src="js/reseme_script.js"></script>

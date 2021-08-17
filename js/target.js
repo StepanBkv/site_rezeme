@@ -17,15 +17,9 @@ document.querySelector(".time__write").innerHTML = str ;
 let date = setInterval(() => {
 	const now = new Date()
 	let	list = [now.getDate(), now.getMonth(), now.getFullYear(), now.getDay()]
-  let	month, week 
-  if(location.hash.substr(1) == 'ru'){
-  	month = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
-  	week = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
-  }
-  else {
-	month = ["january", "february", "march", "april", "may", "june", 'july', 'august', 'september', 'october', 'november', 'december'];
-	week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday","sunday"]
-	}
+	let	month = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"]
+	let	week = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+	let	week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
 	let	str = ""
 	for(let i = 0; i < list.length; i++){
 		if(i == 1){
@@ -127,59 +121,21 @@ if (menuLinks.length > 0){
 	}
 }
 
-// const random = (min, max) => {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
-// const childBlock = document.querySelector('.block__row');
-// let colorArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
-// let changeColor = setInterval(() => {
-// 	let i = random(0, 4);
-// 	let color = '#';
-// 	for( let k = 0; k < 6; k++){
-// 		 color += String(colorArr[random(0, 15)]); 
-// 	}
-// 	childBlock.children[i].style.backgroundColor = color;
-
-// },150);
-// -------------------------------------------------------
- const allLang = ['en','ru'];
- const select  = document.querySelector('.change__lang');
- select.addEventListener('change', changeURLLang);
-
- function changeURLLang() {
- 		let lang = select.value;
- 		location.hash = lang;
- 		location.reload();
- }
-
-// function switchLang(){
-// 		let options = select.querySelectorAll('option');
-// 		options.forEach((item) => {
-//  			if (item.hasAttribute('selected')) item.removeAttribute('selected');
-//  		});
-//  		let lang = location.hash.substr(1);
-//  		options.forEach((item) => {
-//  			if (lang == item.value) item.setAttribute('selected', "");
-//  		});
-// }
-
-function changeLang() {
-	let hash = location.hash.substr(1);
-	if(!allLang.includes(hash)) {
-		location.href = location.pathname + "#ru";
-		location.reload();
-	}
-	select.value = hash;
-	Object.keys(langArr).forEach((item) => {
-			document.querySelector("."+item).innerHTML = langArr[item][hash];
-	});
+const random = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log(location.hash);
-changeLang();
-// -------------------------------------------------------
 
+const childBlock = document.querySelector('.block__row');
+let colorArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+let changeColor = setInterval(() => {
+	let i = random(0, 4);
+	let color = '#';
+	for( let k = 0; k < 6; k++){
+		 color += String(colorArr[random(0, 15)]); 
+	}
+	childBlock.children[i].style.backgroundColor = color;
 
+},150);
 
 /* 
 Вставляем новый элемент...
@@ -226,44 +182,44 @@ afterend
 textElement.insertAdjesentElement(`одно из четырёх значений`, `Элемент HTML`)
 */
 
-// function appendText() {
-// 	const inputItem = this.previousElementSibling;
-// 	if(inputItem.value != ""){
-// 		const newElement = document.createElement('p');
-// 		newElement.textContent = inputItem.value;
-// 		this.closest('.append__item').after(newElement);
-// 	}
-// }
+function appendText() {
+	const inputItem = this.previousElementSibling;
+	if(inputItem.value != ""){
+		const newElement = document.createElement('p');
+		newElement.textContent = inputItem.value;
+		this.closest('.append__item').after(newElement);
+	}
+}
 
-// const appendItem = document.querySelector('.append__item');
-// const buttonAppend = appendItem.lastElementChild;
-// buttonAppend.addEventListener('click', appendText);
+const appendItem = document.querySelector('.append__item');
+const buttonAppend = appendItem.lastElementChild;
+buttonAppend.addEventListener('click', appendText);
 
 
-// const moveImgDiv = document.querySelector('.move__img__div .cards__row');
-// const removeImgDiv = document.querySelector('.cards .cards__row');
-// const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
+const moveImgDiv = document.querySelector('.move__img__div .cards__row');
+const removeImgDiv = document.querySelector('.cards .cards__row');
+const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
 
-// function moveImgtoDiv() { 
-// 	if(!moveImgDiv.parentElement.classList.contains('_active'))
-// 		moveImgDiv.parentElement.classList.add('_active');
-// 	moveImgDiv.append(this);
-// 	this.removeEventListener('click', moveImgtoDiv);
-// 	if (document.querySelectorAll('.move__img__div .cards__row .cards__colomn').length == 3) {
-// 		const newArrImg = document.querySelectorAll('.move__img__div .cards__row .cards__colomn');
-// 		setTimeout(() => {
-// 			newArrImg.forEach(item => removeImgDiv.append(item));
-// 			moveImgDiv.parentElement.classList.remove('_active');
-// 			newArrImg.forEach(item => item.addEventListener('click', moveImgtoDiv));
-// 		}, 2000);
-// 	}
-// }
+function moveImgtoDiv() { 
+	if(!moveImgDiv.parentElement.classList.contains('_active'))
+		moveImgDiv.parentElement.classList.add('_active');
+	moveImgDiv.append(this);
+	this.removeEventListener('click', moveImgtoDiv);
+	if (document.querySelectorAll('.move__img__div .cards__row .cards__colomn').length == 3) {
+		const newArrImg = document.querySelectorAll('.move__img__div .cards__row .cards__colomn');
+		setTimeout(() => {
+			newArrImg.forEach(item => removeImgDiv.append(item));
+			moveImgDiv.parentElement.classList.remove('_active');
+			newArrImg.forEach(item => item.addEventListener('click', moveImgtoDiv));
+		}, 2000);
+	}
+}
 
-// if (cardsColomnCollection.length > 0) {
-// 	cardsColomnCollection.forEach( item => {
-// 		item.addEventListener('click', moveImgtoDiv);
-// 	});
-// }
+if (cardsColomnCollection.length > 0) {
+	cardsColomnCollection.forEach( item => {
+		item.addEventListener('click', moveImgtoDiv);
+	});
+}
 
 // async function awaitRemove(){
 // 	let timer = setInterval(() => {

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Регистрация</title>
 	<link rel="stylesheet" href="../css/signin.css">
+	<link rel="shortcut icon" href="../img/apparatprezidenta2.ico" type="image/png">
 </head>
 <body>
 	<div class="wrapper">
@@ -33,15 +34,21 @@
 					</div>			
 				</div>
 				<div class="form__item">
+					<label for="formLogin" class="form__label">Логин*:</label>
+					<input type="text" id="formLogin" name="login" class="form__input _req">
+					<div class="error__item">
+					</div>
+				</div>
+				<div class="form__item">
 					<label for="formPass" class="form__label">Пароль*:</label>
-					<input type="password" id="formPass" name="pass" class="form__input _req _pass">
+					<input type="password" id="formPass" name="password" class="form__input _req _pass">
 					<div class="error__item">
 						
 					</div>
 				</div>
 				<div class="form__item">
 					<label for="formRePass" class="form__label">Повторите пароль*:</label>
-					<input type="password" id="formRePass" name="repass" class="form__input _req _repass">
+					<input type="password" id="formRePass" name="repassword" class="form__input _req _repass">
 					<div class="error__item">
 						
 					</div>
@@ -87,5 +94,5 @@
 			</form>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/form.js" > </script> 
+	<script type="text/javascript" src="../js/signin.js" > </script> 
 </html>

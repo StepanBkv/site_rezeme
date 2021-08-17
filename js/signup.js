@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
 				alert("result.message");	
 				form.reset();
 				form.classList.remove('_sending');
+				if("location" in result)
 				document.location = result.location;
+				else console.log(result.location);
 			}
 			else {
 				alert("Ошибка отправки.");

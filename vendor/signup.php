@@ -7,11 +7,12 @@
 	$response = [];
 	$check_user = mysqli_query($link, "SELECT (`login`, `password`) FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
 	if(mysqli_num_rows($check_user) > 0){
-		$response = ['message' => 'Не верный логин или пароль.'];
+		$response = ['message' => 'Вы вошли!'];
+		header('Content-type: application/json', 'location: ../index.php');
 		echo json_encode($response);
 	}
 	else {
-		$response = ['message' => 'Не верный логин или пароль.', 'location' => '../index.php'];
+		$response = ['message' => 'Не верный логин или пароль.'];
 		header('Content-type: application/json');
 		echo json_encode($response);
 	}

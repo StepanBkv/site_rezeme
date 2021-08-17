@@ -57,6 +57,7 @@ body {
 	margin: 0px 0px 20px 0px;
 }
 .form__label {
+	color: #fca435;
 	font-size: 18px;
 	display: block;
 	margin: 0px 0px 10px 0px;
@@ -66,14 +67,16 @@ body {
 	padding: 0px 20px;
 	border: 3px solid #fff;
 	width: 100%;
+	margin: 0 0px 15px;
 	&._error {
 		box-shadow: 0 0 15px red;
 	}
 }
 .error__item {
 	& p {
+		margin: 0 0 0 15px;
 		color: red;
-		font-size: 10px;
+		font-size: 15px;
 	}
 }
 

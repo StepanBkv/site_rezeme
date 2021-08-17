@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		formData.append('image', formImage.files[0]);
 		if(error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch('signup.php', {
+			let response = await fetch('../vendor/signin.php', {
 				method: 'POST',
 				body: formData,
 				});
@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	function formValidate(form) {
 		let error = 0;
 		let formReq = document.querySelectorAll('._req');
-
 		for (let i = 0; i < formReq.length; i++) {
 			const element = formReq[i];
 			formRemoveError(element);
@@ -45,12 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
 					formAddError(element);
 					error++;
 				}
+				else if(element.value == ''){
+					formAddError(element);
+					error++;
+				}
 			}
 			else if(element.classList.contains('_repass')){
 				  if(element.value === ""){
 						formAddError(element);
 						console.log("Поле пустое");
 						error++;
+						element.nextElementSibling.innerHTML = "";
 						element.nextElementSibling.insertAdjacentHTML('afterbegin', '<p>Поле пустое*</p>');
 					}
 					else if (element.value !== document.querySelector('._pass').value) {

@@ -31,16 +31,8 @@
     min-height: 70px;
 }
 
-.header__logo {
-}
-.icon__image {
-    border-radius: 50%;
-    z-index: 5;
-    width: 40px;
-    height: 40px;
-}
 .container {
-    max-width: 1240px;
+    max-width: 1180px;
     margin: 0px auto;
 }
 
@@ -51,15 +43,13 @@
 .menu__icon {
     display: none;
 }
-.menu__body {
-    .change__lang{
-        width: 50px;
-        height: 30px;
-        background-color: #912105;
-        color: #fca435;
-        font-size: 20px;
-    }
+.icon__image {
+    border-radius: 50%;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
 }
+.menu__body {}
 .menu__list {
     & > li{
         position: relative;
@@ -73,13 +63,6 @@
     &:hover {
         text-decoration: underline;
     }
-}
-.menu__time {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: #fca435;
 }
 
 body {
@@ -129,162 +112,127 @@ body {
 }
 
 /* дата-спойлеры ****************************************************************************/
-.rezeme {
-    margin: 0 0  0 30px;
-    width: 714px; 
-    position: relative;
-    box-sizing: border-box;
-    .hi__title {
-        font-size: 30px;
-    }
-    .title__version {
-        font-size: 1.4375rem;
-        font-weight: 500;
-        line-height: 1.75rem;
-    }
-    
-    .rezeme__title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .rezeme__row {
-            display: flex;
-            flex-direction: column;
-            & p {
-                margin: 0px 0px 10px 0px;
-                &:last-child{
-                    margin: 0;  
-                }
-            }
-        }}
-        .rezeme__photo img {
-            width: 175px;
-            height: 145px;
-            border-radius: 10%;
-            border: 1px groove black;
-        } 
-    
-    .rezeme__body__header {
-        min-height: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+.block_2 {
+    margin: 20px 0px 10px 0px;
+    .block__item 
+    {
+    margin: 0px 0px 10px 0px;
+    .block__title {
         width: 100%;
-        height: 100px;
-        margin: 0px 0px 10px;
-        ._inline__block{
-            display: inline-block;
-        }
-
-        .post {
-            margin: 10px 0px 0px 0px;
-            font-size:1.4375rem;
-            font-weight: 700px;
-            line-height: 1.5rem;
-        }
-        .redirect {
-            font-size: 1rem;
-            line-height: 1.5rem;
-        }
-        .price {
-            font-size: 1.125rem;
-            font-weight: 700px;
-        }
+        text-align: left;
+        font-size: 18px;
+        background-color: transparent;
+        color: #fff;
+        padding: 10px;
+        position: relative;
+        
     }
-    .rezeme__main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100%;
-        .rezeme__item {
-            font-size: 1rem;
-            font-weight: 700;
-            line-height: 1.5rem;
-            margin: 0px 0px 10px 0px;
-            .rezeme__item__title {
-                font-size: 1.25rem;
-                font-weight: 700;
-                line-height: 1rem;
-            }
+    .block__text {
+        padding: 0 10px 10px;
+        line-height: 130%;
+                }   
+    }
+}
 
-            .rezeme__item__subtitle {
-                font-size: 0.9rem;
-                font-weight: 700;
-                line-height: 1rem;
-            }
+.block_2 .block__item {
+    background-color: #794f45;
+}
+
+.block._init { 
+    & .block__title {
+        cursor: pointer;
+    }
+
+    & .block__title {
+        padding: 10px 0px 10px 0px;
+        &::before, 
+        &::after {
+            content: "";
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            right: 2%;
+            top: 20px;
+            transition: transform 1s ease 0s;
         }
-        .exper {
-            font-size:1.4375rem;
-            font-weight: 700px;
-            line-height: 1.5rem;
-            .exper__year{
-                font-weight: 700px;
-                font-size: .8125rem;
-                line-height: 1rem;
-            }
+        &::after {
+            transform: rotate(-90deg);
         }
-        .rezeme__row {
-            display: flex;
-            flex-direction: row;
-            .date {
-                padding: 0px 50px 0px 0px;
-                width: 180px;
-                & > ul {
-                    font-size: 1rem;
-                    line-height: 1rem;
-                }
-            }
-        }
-        .rezeme__block__2 {
-            .rezeme__row__info {
-                p {
-                    display: block;
-                    position: relative;
-                    margin: 0 0 0 20px;
-                    &::before {
-                        position: absolute;
-                        top: 50%;
-                        left: -7px;
-                        content: "";
-                        align-item:center;
-                        display: block;
-                        background-color: #000;
-                        height: 2px;
-                        width: 5px;
-                    }
-                }
-            }
+            
+        &._active::after {
+            transform: rotate(0deg);
         }
     }
 }
 
-.hobby {
-    .hobby__title {
-        font-size: 1.4375rem;
-        font-weight: 500;
-        line-height: 1.75rem;
-    }
-    .hobby__text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100%;
-        p {
-            display: block;
+.block__1 {
+    margin: 0px 0px 30px 0px;
+    .block__item{
+        max-width: 1200px;
+        padding: 20px;
+        .block__title {
+            width: 100%;
+            text-align: left;
+            font-size: 25px;
+            background-color: transparent;
+            color: green;
+            margin: 0 0 10px 0;
             position: relative;
-            margin: 0 0 0 20px;
-            &::before {
-                position: absolute;
-                top: 50%;
-                left: -7px;
-                content: "";
-                align-item:center;
-                display: block;
-                background-color: #000;
-                height: 2px;
-                width: 5px;
-            }
+            &:focus {
+            box-shadow: 0 0 15px #000;
         }
+        }
+        .block__text {
+            padding: 0px 10px 10px;
+            line-height: 130%;
+        }
+    }
+}
+
+.block__1 .block__item{
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.block__1._init {
+    & .block__title {
+        padding: 10px 40px 10px 10px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: "";
+            width: 20px;
+            height: 1px;
+            background-color: #325252;
+            position: absolute;
+            right: 10%;
+            top: 20px;
+            transition: transform 1s ease 0s;
+        }
+
+        &::after {
+            transform: rotate(-90deg);
+        }
+        &._active::after {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.text__after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    height: 65px;
+    margin-top: 50px;
+    transition: visibility 0.2s ease  0s;
+    &._init {
+        visibility: visible;
+    }
+    & p {
+        color: red;
     }
 }
 /* дата-спойлеры ****************************************************************************/
@@ -429,7 +377,44 @@ body {
         color: #000;
     }
 }
+
+.hi{
    
+
+    .hi__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hi__body {
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 1;
+    }
+
+
+    .hi__title {
+        h1 {
+            &:hover {
+                text-decoration: underline;
+                color: red;
+            }
+        }
+        
+    }
+
+    .hi__image {
+        width: 200px;
+        height: 100px;
+        flex-grow: 1;
+    }
+
+    .hi__time {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+}
 .box__menu {
    
 
@@ -543,43 +528,27 @@ body {
         height: 100%;
     }
 }
-.menu__list > li:hover .menu__time .calendar {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, 0px);
-    pointer-events: all;
-} 
-.calendar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #000;
-    padding: 5px;
-    transform: translate(0px, 7%);
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease 0s;
-    .calendar__item{
-        //приорететная запись, не смотря где она записана, выше или ниже родительского, всё равно, останется прежней
-        table {
-          border-collapse: collapse;
-              td, th {
-              border: 1px groove black;
-              padding:3px;
-              text-align: center;
-             }
 
-             th {
-              font-weight: bold;
-              background-color: #ff0000;
-            }
-            .this_day {
-                background-color: red;
-            }
+.calendar__item{
+    //приорететная запись, не смотря где она записана, выше или ниже родительского, всё равно, останется прежней
+    table {
+      border-collapse: collapse;
+          td, th {
+          border: 1px groove black;
+          padding-left: 60px;
+          text-align: center;
+         }
+
+         th {
+          font-weight: bold;
+          background-color: #E6E6E6;
+        }
+        .this_day {
+            background-color: red;
         }
     }
 }
+ 
 .box__news {
     & .section__row {
         margin: 20px -15px 0px;
@@ -590,6 +559,25 @@ body {
         padding: 15px;
         flex: 0 1 33.333%;
     }
+
+    & .section__item_flex :hover {
+    	animation-name: rotate_div;
+    	animation-duration: 3s;
+    	animation-iteration-count: infinite;
+    }
+
+    @keyframes rotate_div {
+        	0% {
+        		transform: rotate(0deg) scale(1.3);
+        	}
+        	50% {
+        		transform: rotate(180deg) scale(1.3);
+        	}
+        	100%{
+        		transform: rotate(360deg) scale(1.3);
+        	}
+        }
+
     & .section__subtitle {
         font-size: 25px;
         text-align: center;
@@ -599,7 +587,7 @@ body {
         display: flex;
         flex-direction: column;
         margin:15px;
-        padding: 15px;
+        padding: 15px; 
         background-color: #432352;
     }
     & .section__text {
