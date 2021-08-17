@@ -19,7 +19,9 @@
 
 	if (mysqli_query ( $link,"INSERT INTO `user` (`id`, `name`, `surname`, `sex`, `login`, `password`, `email`, `phone`, `age`, `photo`) VALUES (NULL, '$name', '$surname', '$sex', '$login', '$password', '$email', '$phone', '$age', '$filePath')"))
 	{
-		$response = ['message' => 'Вы зарегистрировались!', 'location' => '../vendor/signup.html'];
+		$response = ['message' => 'Вы зарегистрировались!', 'location' => 'http://localhost:80/'];
+		$_SESSION['login'] = $login;
+		$_SESSION['password'] = $password;
 	}
 	else {
 		$response = ['message' => 'Ошибка при регистрации!'.mysqli_connect_errno(). "  ".mysqli_connect_error(), 'location' => '../vendor/signin.html'];

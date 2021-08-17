@@ -1,0 +1,17 @@
+@import "nullstyle.scss";
+.footer {
+    background-color: #f5f5f5;
+    .footer__row {
+        widows: 1080px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__text {
+        color: #445162;
+        font-size: 12px;
+        letter-spacing: 0.3px;
+    }
+}

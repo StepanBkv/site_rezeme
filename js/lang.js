@@ -1,4 +1,8 @@
 const langArr = {
+	"title": {
+		"ru":"Главная страница",
+		"en":"Main page",
+	},
 	"title__version": {
 		"ru":"Русская версия",
 		"en":"English version",
@@ -101,9 +105,17 @@ const langArr = {
 		"ru":"Авторизация",
 		"en":"Authorization",
 	},
+	"account": {
+		"ru":"Аккаунт",
+		"en":"Account",
+	},
 	"tasks": {
 		"ru":"Задания",
 		"en":"Tasks",
+	},
+	"exit": {
+		"ru":"Выйти",
+		"en":"Exit",
 	},
 	"hi__title": {
 		"ru":"Бабаков Степан Евгеньевич",

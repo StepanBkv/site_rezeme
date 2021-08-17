@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			if(response.ok) {
 				let result = await response.json();
-				alert(result.message);
+				alert(result.location);
 				formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
@@ -107,14 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function uploadFile(file) {
 		// проверяем тип файла
-		if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)){
+		if (!['image/jpeg', 'image/png', 'image/gif', 'image/jpg',].includes(file.type)){
 			alert('Разрешены только изображения.');
 			formImage.value = '';
 			return;
 		}
 		// проверяем размер файла (< 2 МБ)
-		if (file.size > 2 * 1024 * 1024) {
-			alert ('Файл должен быть менее 2 МБ.');
+		if (file.size > 512) {
+			alert ('Файл должен быть менее 512 КБ.');
 			return;
 		}
 		let reader = new FileReader();

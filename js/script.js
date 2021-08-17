@@ -171,12 +171,42 @@ function changeLang() {
 		location.reload();
 	}
 	select.value = hash;
-	Object.keys(langArr).forEach((item) => {
+	for (let item in langArr) {
+		let itemElementLeng = document.querySelector("."+item);
+		if(itemElementLeng)
 			document.querySelector("."+item).innerHTML = langArr[item][hash];
-	});
+		else console.log(item);
+	}
+// 	Object.keys(langArr).forEach((item) => {}
 }
-console.log(location.hash);
-changeLang();
+
+async function exitOnAccount(e){
+	var data = {exit: 1};
+	var formData = new FormData();
+	for(var i in data)
+	   formData.append(i,data[i]);
+	
+	let response = await fetch('../vendor/signup.php', {
+		method: 'post',
+		body: formData
+	});
+
+	if (response.ok){
+		let result = await response.json();
+		result.message;
+	}
+	else {
+		alert('Не вышло');
+	}
+	location.reload();
+}
+
+
+document.addEventListener("DOMContentLoaded",changeLang);
+const exit = document.querySelector('.exit');
+if(exit){
+	exit.addEventListener("click", exitOnAccount);
+}
 // -------------------------------------------------------
 
 

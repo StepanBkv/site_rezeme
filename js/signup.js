@@ -16,21 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			if(response.ok) {
 				let result = await response.json();
-				alert("result.message");	
+				messageAlert(result.message);
 				form.reset();
 				form.classList.remove('_sending');
 				if("location" in result)
 				document.location = result.location;
-				else console.log(result.location);
+				else console.log(result.message);
 			}
 			else {
-				alert("Ошибка отправки.");
+				messageAlert("Ошибка отправки.");
 				form.classList.remove('_sending');
 			}
 		} else {
-			alert("Заполните обязательные поля");
+			messageAlert("Заполните обязательные поля");
 		}
 	}	
+
+	function messageAlert(message){
+		let messageEl = document.querySelector('.message__row');
+		messageEl.innerHTML = '';
+		messageEl.insertAdjacentHTML('afterbegin', `<div class="message__item"><p>${message}</p></div>`); 
+	}
 
 	function formValidate(form) {
 		let error = 0;

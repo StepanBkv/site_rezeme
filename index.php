@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Вёрстка</title>
+<title class='title'>Главная страница</title>
 
  <meta name="viewport" content="width=device-width, inintial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
@@ -51,11 +51,24 @@
 													</ul>
 												</li>
 												<li>
-													<a href="vendor/signup.html" class="menu__link autor">Авторизация</a>
-												</li>
-												<li>
 													<a href="target.html" class="menu__link tasks">Задания</a>
 												</li>
+												<?php
+
+												 if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
+												 	echo '<li> <a href="account.php" class="menu__link account">Аккаунт</a> 
+												 		<span class="menu__arrow"></span>
+												 		<ul class="menu__sub-list">
+															<li>
+																<a href="#"class="menu__sub-link exit">Выйти.</a>
+															</li>
+														</ul>
+												 		</li>';
+												 }
+												 	
+												 else
+													echo '<li><a href="vendor/signup.html" class="menu__link autor">Авторизация</a> </li>';
+												?>
 												<li>
 													<select class="change__lang">
 														<option value="en">EN</option>
@@ -194,7 +207,6 @@
 					</div>
 				</div>
 			</div>
-			
 			<footer class="footer">
  				<div class="footer__row"> 
  					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
