@@ -138,6 +138,11 @@
 										<div class="cards__item">
 											<div class="cards__image">	
 												<img src="img/sea_1.jpg" alt="sea_1">
+												<div class="textCenter">
+													<p>
+														Красивое море
+													</p>
+												</div> 
 											</div>
 										</div>
 									</div>
@@ -146,6 +151,11 @@
 										<div class="cards__item">
 											<div class="cards__image">	
 												<img src="img/sea_2.jpg" alt="sea_2">
+												<div class="textCenter">
+													<p>
+														Очень красивое море
+													</p>
+												</div> 
 											</div>
 										</div>
 									</div>
@@ -154,6 +164,11 @@
 										<div class="cards__item">
 											<div class="cards__image">	
 												<img src="img/sea_3.jpeg" alt="sea_3">
+												<div class="textCenter">
+													<p>
+														Мега красивое море
+													</p>
+												</div> 
 											</div>
 										</div>
 									</div>

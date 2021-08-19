@@ -104,6 +104,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   z-index: 10;
   background-color: #912105;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .headear__container {
@@ -617,6 +619,19 @@ body._lock {
   margin: 0px 0px 70px 0px;
 }
 
+.textCenter {
+  z-index: 2;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+}
+.textCenter p {
+  font-size: 20px;
+  color: #904000;
+}
+
 .cards__row {
   margin: 0px -15px 0px -15px;
   display: -webkit-box;
@@ -629,12 +644,21 @@ body._lock {
       -ms-flex: 0 1 33.3333%;
           flex: 0 1 33.3333%;
   padding: 0px 15px;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .cards__image {
   margin: 0px 0px 20px 0px;
   padding: 0px 0px 60% 0px;
   overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 .cards__image img {
@@ -645,6 +669,9 @@ body._lock {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .move__img__div {

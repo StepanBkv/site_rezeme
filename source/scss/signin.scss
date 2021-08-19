@@ -10,6 +10,10 @@ body {
 .wrapper {
 	padding: 50px;
 }
+.header__item{
+	display: flex;
+	justify-content: space-between;
+}
 
 .form {
 	max-width: 550px;
@@ -47,10 +51,19 @@ body {
 .form__title {
 	font-size: 20px;
 	font-weight: 700;
-	margin: 0px 0px 30px 0px;
+	margin: 0px 0px 0px 0px;
 	&.form__title__main {
-		font-size: 40px;
+		font-size: 30px;
 		color: #fde352;
+	}
+}
+.main__page{
+	&:active{
+		color: red;
+	}
+	
+	&:hover{
+		text-decoration: underline;
 	}
 }
 .form__item {
@@ -80,7 +93,17 @@ body {
 	}
 }
 
-
+.main_page {
+	width: 100%;
+	display: inline-flex;
+	line-height: 140%;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	& a {
+		color: #fde352;
+	}
+} 
 .select {
 	padding: 10px 42% 10px 42%; 
 	border-radius: 3%;

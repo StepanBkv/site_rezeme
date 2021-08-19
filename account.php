@@ -103,6 +103,8 @@
                                         <p><?=$user[name]?></p>
                                         <span>Фамилия: </span>
                                         <p><?=$user[surname]?></p>
+                                        <span>Пол: </span>
+                                        <p><?php if($user[sex]== 'man') echo "Мужской"; else echo "Женский";?></p>
                                         <span>Возраст: </span>
                                         <p><?=$user[age]?></p>
                                         <span>Электроная почта: </span>

@@ -13,6 +13,18 @@ let time = setInterval(() => {
 document.querySelector(".time__write").innerHTML = str ;
 }, 1000);
 
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+	let headerNavBar = document.querySelector('.header')
+	let currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		headerNavBar.style.top = "0";
+	}
+	else {
+		headerNavBar.style.top = "-70px";
+	}
+	prevScrollpos = currentScrollPos;
+} 
 
 let date = setInterval(() => {
 	const now = new Date()

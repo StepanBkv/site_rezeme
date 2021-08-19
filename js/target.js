@@ -1,44 +1,44 @@
  "use strict";
 
-let time = setInterval(() => {
-	const date = new Date();
-	let list = [date.getHours(), date.getMinutes(), date.getSeconds()]
-	let	str = ""
-	for (let i = 0; i < list.length; i++){
-		if(list[i] < 10) str += "0" + list[i] 
-		else str += list[i]
-		if (i < list.length - 1) str += ":"
-	}
+// let time = setInterval(() => {
+// 	const date = new Date();
+// 	let list = [date.getHours(), date.getMinutes(), date.getSeconds()]
+// 	let	str = ""
+// 	for (let i = 0; i < list.length; i++){
+// 		if(list[i] < 10) str += "0" + list[i] 
+// 		else str += list[i]
+// 		if (i < list.length - 1) str += ":"
+// 	}
 
-document.querySelector(".time__write").innerHTML = str ;
-}, 1000);
+// document.querySelector(".time__write").innerHTML = str ;
+// }, 1000);
 
 
-let date = setInterval(() => {
-	const now = new Date()
-	let	list = [now.getDate(), now.getMonth(), now.getFullYear(), now.getDay()]
-	let	month = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"]
-	let	week = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
-	let	week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
-	let	str = ""
-	for(let i = 0; i < list.length; i++){
-		if(i == 1){
-			for(let j = 0; j < month.length; j++) {
-				if (j == list[i]) str += month[j] + " "
-			}
-		}
+// let date = setInterval(() => {
+// 	const now = new Date()
+// 	let	list = [now.getDate(), now.getMonth(), now.getFullYear(), now.getDay()]
+// 	let	month = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"]
+// 	let	week = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+// 	let	week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
+// 	let	str = ""
+// 	for(let i = 0; i < list.length; i++){
+// 		if(i == 1){
+// 			for(let j = 0; j < month.length; j++) {
+// 				if (j == list[i]) str += month[j] + " "
+// 			}
+// 		}
 
-		else if(i == 3){
-			for(let j = 0; j < week.length; j++) {
-				if (j == list[i] - 1) str += week[j] + " "
-			}
-		}
+// 		else if(i == 3){
+// 			for(let j = 0; j < week.length; j++) {
+// 				if (j == list[i] - 1) str += week[j] + " "
+// 			}
+// 		}
 
-		else str += list[i] + " "
-	}
-document.querySelector(".date__write").innerHTML = str;
+// 		else str += list[i] + " "
+// 	}
+// document.querySelector(".date__write").innerHTML = str;
 
-}, 1000);
+// }, 1000);
 
 const isMobile = {
 	Android: function () { 
@@ -121,6 +121,28 @@ if (menuLinks.length > 0){
 	}
 }
 
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+	let headerNavBar = document.querySelector('.header')
+	let currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		headerNavBar.style.top = "0";
+	}
+	else {
+		headerNavBar.style.top = "-70px";
+	}
+	prevScrollpos = currentScrollPos;
+} 
+
+let cardsColomn = document.querySelectorAll('.cards__image img');
+
+if (cardsColomn.length > 0) {
+	cardsColomn.forEach( item => {
+		item.addEventListener('mousemove', function(){this.style.opacity = 0; this.nextElementSibling.style.opacity = 1});
+		item.addEventListener('mouseleave', function(){this.style.opacity = 1; this.nextElementSibling.style.opacity = 0})
+	});
+}
+
 const random = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -195,7 +217,7 @@ const appendItem = document.querySelector('.append__item');
 const buttonAppend = appendItem.lastElementChild;
 buttonAppend.addEventListener('click', appendText);
 
-
+//--------------------------------------------------------------------
 const moveImgDiv = document.querySelector('.move__img__div .cards__row');
 const removeImgDiv = document.querySelector('.cards .cards__row');
 const cardsColomnCollection = document.querySelectorAll('.cards__colomn');
@@ -205,15 +227,21 @@ function moveImgtoDiv() {
 		moveImgDiv.parentElement.classList.add('_active');
 	moveImgDiv.append(this);
 	this.removeEventListener('click', moveImgtoDiv);
+	this.firstElementChild.firstElementChild.firstElementChild.style.opacity = 1;
+	this.firstElementChild.firstElementChild.lastElementChild.style.opacity = 0;
 	if (document.querySelectorAll('.move__img__div .cards__row .cards__colomn').length == 3) {
 		const newArrImg = document.querySelectorAll('.move__img__div .cards__row .cards__colomn');
 		setTimeout(() => {
 			newArrImg.forEach(item => removeImgDiv.append(item));
 			moveImgDiv.parentElement.classList.remove('_active');
-			newArrImg.forEach(item => item.addEventListener('click', moveImgtoDiv));
+			newArrImg.forEach(item => {item.addEventListener('click', moveImgtoDiv); 
+				item.firstElementChild.firstElementChild.firstElementChild.style.opacity = 1;
+				item.firstElementChild.firstElementChild.lastElementChild.style.opacity = 0;});
 		}, 2000);
 	}
 }
+
+//----------------------------------------------------------------------
 
 if (cardsColomnCollection.length > 0) {
 	cardsColomnCollection.forEach( item => {

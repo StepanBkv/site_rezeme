@@ -51,7 +51,7 @@
 													</ul>
 												</li>
 												<li>
-													<a href="target.html" class="menu__link tasks">Задания</a>
+													<a href="target.php" class="menu__link tasks">Задания</a>
 												</li>
 												<?php
 
