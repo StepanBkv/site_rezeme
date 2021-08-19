@@ -55,13 +55,13 @@ body {
 	&.form__title__main {
 		font-size: 30px;
 		color: #fde352;
-	}
+	}    
 }
 .main__page{
 	&:active{
 		color: red;
 	}
-	
+
 	&:hover{
 		text-decoration: underline;
 	}
