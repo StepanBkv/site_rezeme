@@ -51,7 +51,7 @@
 													<a href="parallax.html" class="menu__link">Параллакс эффект</a>
 												</li>
 												<li>
-													<a href="vendor/signup.html" class="menu__link">Авторизация</a>
+													<a href="vendor/signup.php" class="menu__link">Авторизация</a>
 												</li>
 											</ul>
 										</nav>

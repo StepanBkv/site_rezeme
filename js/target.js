@@ -204,18 +204,33 @@ afterend
 textElement.insertAdjesentElement(`одно из четырёх значений`, `Элемент HTML`)
 */
 
+
+
+
 function appendText() {
 	const inputItem = this.previousElementSibling;
 	if(inputItem.value != ""){
 		const newElement = document.createElement('p');
 		newElement.textContent = inputItem.value;
 		this.closest('.append__item').after(newElement);
+		inputItem.value = "";
 	}
+}
+
+function deletedPhara (event) {
+	console.log(event);
+	if(event.target.localName == "p"){
+	event.target.innerHTML = "";}
 }
 
 const appendItem = document.querySelector('.append__item');
 const buttonAppend = appendItem.lastElementChild;
 buttonAppend.addEventListener('click', appendText);
+const appendTextArr = document.querySelector('.append__text');
+appendTextArr.addEventListener('click', deletedPhara); 
+
+
+
 
 //--------------------------------------------------------------------
 const moveImgDiv = document.querySelector('.move__img__div .cards__row');
