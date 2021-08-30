@@ -1,4 +1,5 @@
 <?php
+class Connect
 session_start();
 $host = 'localhost';
 $user =  'native';

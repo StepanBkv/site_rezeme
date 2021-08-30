@@ -30,7 +30,7 @@ let date = setInterval(() => {
 	const now = new Date()
 	let	list = [now.getDate(), now.getMonth(), now.getFullYear(), now.getDay()]
   let	month, week 
-  if(location.hash.substr(1) == 'ru'){
+  if(select.value == 'ru'){
   	month = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
   	week = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"];
   }
@@ -157,38 +157,39 @@ if (menuLinks.length > 0){
 // -------------------------------------------------------
  const allLang = ['en','ru'];
  const select  = document.querySelector('.change__lang');
- select.addEventListener('change', changeURLLang);
+ select.addEventListener('change', changeLang);
 
- function changeURLLang() {
+ // function changeURLLang() {
+ // 		let lang = select.value;
+ // 		location.reload();
+ // }
+
+function switchLang(){
+		let options = select.querySelectorAll('option');
+		options.forEach((item) => {
+ 			if (item.hasAttribute('selected')) item.removeAttribute('selected');
+ 		});
  		let lang = select.value;
- 		location.hash = lang;
- 		location.reload();
- }
-
-// function switchLang(){
-// 		let options = select.querySelectorAll('option');
-// 		options.forEach((item) => {
-//  			if (item.hasAttribute('selected')) item.removeAttribute('selected');
-//  		});
-//  		let lang = location.hash.substr(1);
-//  		options.forEach((item) => {
-//  			if (lang == item.value) item.setAttribute('selected', "");
-//  		});
-// }
+ 		options.forEach((item) => {
+ 			if (lang == item.value) item.setAttribute('selected', "");
+ 		});
+}
 
 function changeLang() {
-	let hash = location.hash.substr(1);
-	if(!allLang.includes(hash)) {
-		location.href = location.pathname + "#ru";
-		location.reload();
-	}
-	select.value = hash;
+	//let hash = location.hash.substr(1);
+	// if(!allLang.includes(hash)) {
+	// 	location.href = location.pathname + "#ru";
+	// 	location.reload();
+	// }
 	for (let item in langArr) {
 		let itemElementLeng = document.querySelector("."+item);
 		if(itemElementLeng)
-			document.querySelector("."+item).innerHTML = langArr[item][hash];
+			document.querySelector("."+item).innerHTML = langArr[item][select.value];
 		else console.log(item);
 	}
+	switchLang()
+	// location.reload();
+
 // 	Object.keys(langArr).forEach((item) => {}
 }
 
@@ -214,7 +215,7 @@ async function exitOnAccount(e){
 }
 
 
-document.addEventListener("DOMContentLoaded",changeLang);
+//document.addEventListener("DOMContentLoaded",changeLang);
 const exit = document.querySelector('.exit');
 if(exit){
 	exit.addEventListener("click", exitOnAccount);
