@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +47,20 @@
 													<a href="parallax.html" class="menu__link">Параллакс эффект</a>
 												</li>
 												<li>
-													<a href="vendor/signup.php" class="menu__link">Авторизация</a>
+												</li>
+												<?php Controller_target::menu_body_list_account();?>
+												<li>
+												</li>
+												<li>
+													<div class="menu__time">
+														<div class="time__write"> </div>
+														<div class="date__write"> </div>
+														<div class="calendar">
+															<div class="calendar__row">
+																<div class="calendar__item"></div>
+															</div>
+														</div>
+													</div>
 												</li>
 											</ul>
 										</nav>

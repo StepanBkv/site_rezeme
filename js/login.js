@@ -8,9 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		e.preventDefault();
 		let error = formValidate(form);
 		let formData = new FormData(form);
+		formData.append('ajax', 1);
 		if(error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch('../vendor/signup.php', {
+			let response = await fetch('../application/models/login.php', {
 				method: 'POST',
 				body: formData,
 				});

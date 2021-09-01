@@ -87,7 +87,7 @@ async function exitOnAccount(e){
 	for(var i in data)
 	   formData.append(i,data[i]);
 	
-	let response = await fetch('../vendor/signup.php', {
+	let response = await fetch('application/models/login.php', {
 		method: 'post',
 		body: formData
 	});

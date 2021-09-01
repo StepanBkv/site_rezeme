@@ -1,7 +1,3 @@
-<?php
-	session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,24 +47,9 @@
 													</ul>
 												</li>
 												<li>
-													<a href="<?php Controller_Main::redirect();?>" class="menu__link tasks">Задания</a>
+													<a href="<?php Controller_Main::redirect_echo('target');?>" class="menu__link tasks">Задания</a>
 												</li>
-												<?php
-
-												 if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
-												 	echo '<li> <a href="account.php" class="menu__link account">Аккаунт</a> 
-												 		<span class="menu__arrow"></span>
-												 		<ul class="menu__sub-list">
-															<li>
-																<a href="#"class="menu__sub-link exit">Выйти.</a>
-															</li>
-														</ul>
-												 		</li>';
-												 }
-												 	
-												 else
-													echo '<li><a href="vendor/signup.html" class="menu__link autor">Авторизация</a> </li>';
-												?>
+												<?php Controller_main::menu_body_list_account();?>
 												<li>
 													<select class="change__lang">
 														<option value="en">EN</option>
@@ -212,10 +193,11 @@
  					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
  				</div>
 		    </footer>
-		    <script type="text/javascript" src="../js/lang.js"></script>
-			<script type="text/javascript" src="../js/script.js"></script>
-			<script type="text/javascript" src="../js/calendar.js"></script>
-			<script type="text/javascript" src="../js/reseme_script.js"></script>
+		    <script type="text/javascript" src="js/lang.js"></script>
+			<script type="text/javascript" src="js/script.js"></script>
+			<script type="text/javascript" src="js/calendar.js"></script>
+			<script type="text/javascript" src="js/get_to_time.js"></script>
+			<script type="text/javascript" src="js/reseme_script.js"></script>
 		</div>
 	</body>
 </html>

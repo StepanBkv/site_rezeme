@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Регистрация</title>
-	<link rel="stylesheet" href="../css/signin.css">
-	<link rel="shortcut icon" href="../img/apparatprezidenta2.ico" type="image/png">
+	<link rel="stylesheet" href="css/signin.css">
+	<link rel="shortcut icon" href="img/apparatprezidenta2.ico" type="image/png">
 </head>
 <body>
 	<div class="wrapper">
@@ -105,5 +105,5 @@
 			</form>
 		</div>
 	</div>
-	<script type="text/javascript" src="../js/signin.js" > </script> 
+	<script type="text/javascript" src="js/registration.js" > </script> 
 </html>

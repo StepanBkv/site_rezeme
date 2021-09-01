@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		formData.append('image', formImage.files[0]);
 		if(error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch('../vendor/signin.php', {
+			let response = await fetch('../application/models/registration.php', {
 				method: 'POST',
 				body: formData,
 				});

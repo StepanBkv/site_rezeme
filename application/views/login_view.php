@@ -5,11 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Авторизация</title>
-	<link rel="stylesheet" href="../css/signup.css">
-	<link rel="shortcut icon" href="../img/apparatprezidenta2.ico" type="image/png">
+	<link rel="stylesheet" href="css/signup.css">
+	<link rel="shortcut icon" href="img/apparatprezidenta2.ico" type="image/png">
 </head>
 <body>
 	<div class="wrapper">
+		<?php $request = Controller_login::check_autorize_user(); ?>
 		<div class="message">
 			<div class="message__row">
 				
@@ -32,7 +33,7 @@
 				<button type="submit" class="form__button">Отправить</button>
 				<div class="form__aftertext">
 					<p>
-						У вас нет аккаунта? - <a href="signin.html">Зарегистрируйтесь!</a>
+						У вас нет аккаунта? - <a href="<?php Controller_login::redirect("registration");?>">Зарегистрируйтесь!</a>
 					</p>
 				</div>
 				<div class="main_page">
@@ -43,5 +44,5 @@
 			</form>
 		</div>
 	</div>
-	<script type="text/javascript" src="../js/signup.js" > </script> 
+	<script type="text/javascript" src="js/login.js" > </script> 
 </html>

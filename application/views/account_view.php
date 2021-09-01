@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    require_once 'vendor/connect.php';
+    require_once 'application/models/connect.php';
 ?>
 
 <!DOCTYPE html>
@@ -21,16 +20,7 @@
         <div class="content">
             <div class="page">
                 <div class="container">
-                 <?php 
-                        if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
-                            $login = $_SESSION['login'];
-                            $password = $_SESSION['password'];
-                            $user = mysqli_query($link, "SELECT * FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
-                            $user = mysqli_fetch_assoc($user);
-                        }
-                        else header('location: http://localhost:80/vendor/signup.html')
-                    ?>
-
+                    <?php $user = Controller_account::check_autorize_user(); ?>
                     <header class="header">
                                 <div class="headear__container">
                                     <a href="http://localhost:80/" class="header__logo">
@@ -63,24 +53,7 @@
                                                 <li>
                                                     <a href="target.html" class="menu__link tasks">Задания</a>
                                                 </li>
-
-                                                <?php
-
-                                                 if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
-                                                    echo '<li> <a href="account.php" class="menu__link account">Аккаунт</a> 
-                                                        <span class="menu__arrow"></span>
-                                                        <ul class="menu__sub-list">
-                                                            <li>
-                                                                <a href="#"class="menu__sub-link exit">Выйти.</a>
-                                                            </li>
-                                                        </ul>
-                                                        </li>';
-                                                 }
-                                                    
-                                                 else
-                                                    echo '<li><a href="vendor/signup.html" class="menu__link autor">Авторизация</a> </li>';
-                                                ?>
-                                                <li>
+                                               <li>
                                                     <div class="menu__time">
                                                         <div class="time__write"> </div>
                                                         <div class="date__write"> </div>
@@ -100,20 +73,20 @@
                                 <div class="userinfo__row">
                                     <div class="userinfo__item">
                                         <span>Имя: </span>
-                                        <p><?=$user[name]?></p>
+                                        <p><?=$user['name']?></p>
                                         <span>Фамилия: </span>
-                                        <p><?=$user[surname]?></p>
+                                        <p><?=$user['surname']?></p>
                                         <span>Пол: </span>
-                                        <p><?php if($user[sex]== 'man') echo "Мужской"; else echo "Женский";?></p>
+                                        <p><?php if($user['sex']== 'man') echo "Мужской"; else echo "Женский";?></p>
                                         <span>Возраст: </span>
-                                        <p><?=$user[age]?></p>
+                                        <p><?=$user['age']?></p>
                                         <span>Электроная почта: </span>
-                                        <p><?=$user[email]?></p>
+                                        <p><?=$user['email']?></p>
                                         <span>Телефон: </span>
-                                        <p><?=$user[phone]?></p>
+                                        <p><?=$user['phone']?></p>
                                     </div>
                                     <div class="userinfo__photo">
-                                        <?= "<img class ='image' src='$user[photo]' alt='main foto'>" ?>
+                                        <?= "<img class ='image' src='$user[photo]' alt='Нет фото'>" ?>
                                     </div>  
                                 </div> 
                             </div>
@@ -128,5 +101,7 @@
             </div>
         </footer>
         <script type="text/javascript" src="js/account.js"></script>
+        <script type="text/javascript" src="js/calendar.js"></script>
+        <script type="text/javascript" src="js/get_to_time.js"></script>
     </div>
 </html>

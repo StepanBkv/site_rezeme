@@ -9,9 +9,11 @@ let calendar = setInterval(() => {
 	  let month = now.getMonth();; // месяцы в JS идут от 0 до 11, а не от 1 до 12
     let d = new Date(year, month);
     let week_short = [];
-    const select  = document.querySelector('.change__lang');
-    if(select.value == "ru") week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-    else week_short = ['mon', 'tues', 'wed', 'thuers' , 'fri', 'sat', 'sun'];
+    //const select  = document.querySelector('.change__lang');
+    //if(select.value == "ru") 
+    week_short = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+    //else 
+      //week_short = ['mon', 'tues', 'wed', 'thuers' , 'fri', 'sat', 'sun'];
 
     let table = '<table><tr>';
 
