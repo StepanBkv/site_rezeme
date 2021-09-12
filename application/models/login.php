@@ -1,5 +1,6 @@
 <?php
 	require_once 'connect.php';
+	session_start();
 	if(isset($_POST['ajax'])){
 		if (isset($_SESSION['login']) and isset($_SESSION['password'])) {
 			if(isset($_POST['exit'])) {
@@ -18,8 +19,10 @@
 				$login = $_POST['login'];
 				$password = md5($_POST['password']);
 				$response = [];
+				$link = Work_To_Database::database_connect();
 				$check_user = mysqli_query($link, "SELECT * FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
 				if(mysqli_num_rows($check_user) > 0){
+					
 					$_SESSION['login'] = $login;
 					$_SESSION['password'] = $password;
 					$response = ['message' => 'Вы вошли!','location' => 'http://localhost:80/'];

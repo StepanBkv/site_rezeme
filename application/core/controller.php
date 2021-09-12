@@ -24,9 +24,9 @@
 			return $property;
 
 		}
-		function check_autorize_user($property){
-			echo $property;
-		}
+		// function check_autorize_user($property){
+		// 	echo $property;
+		// }
 	}
 
 

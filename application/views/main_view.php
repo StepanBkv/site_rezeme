@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +50,9 @@
 												<li>
 													<a href="<?php Controller_Main::redirect_echo('target');?>" class="menu__link tasks">Задания</a>
 												</li>
+
 												<?php Controller_main::menu_body_list_account();?>
+												
 												<li>
 													<select class="change__lang">
 														<option value="en">EN</option>
