@@ -67,10 +67,12 @@ class Route
 			Route::ErrorPage404();
 		}
 	
-	}
 	
-	function ErrorPage404()
-	{
+	}
+	function Admin() {
+		include 'application/admin/add_barrels.php';
+	}
+	function ErrorPage404() {
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');
 		header("Status: 404 Not Found");
