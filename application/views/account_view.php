@@ -51,7 +51,7 @@
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="target.html" class="menu__link tasks">Задания</a>
+                                                    <a href="target" class="menu__link tasks">Задания</a>
                                                 </li>
                                                <li>
                                                     <div class="menu__time">

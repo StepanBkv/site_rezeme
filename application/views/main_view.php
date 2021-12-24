@@ -189,6 +189,20 @@
 						<div class="container">
 						</div>
 					</div>
+					<div id="popup" class="popup">
+						<div class="popup__body">
+							<div class="popup__content">
+								<a href="" class="popup__close"></a>
+								<div class="popup__title">Это модальное окно №1</div>
+								<div class="popup__text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</div>
+							</div>
+						</div>	
+					</div>
 				</div>
 			</div>
 			<footer class="footer">

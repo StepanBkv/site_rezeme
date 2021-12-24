@@ -21,7 +21,7 @@
 									<div class="header__menu menu">
 										<nav class="menu__body">
 											<ul class="menu__list">
-												<li> <a data-goto=".page__section_1" href="bio.html" class="menu__link">Biography</a> </li>
+												<li> <a data-goto=".page__section_1" href="bio" class="menu__link">Biography</a> </li>
 												<li> <a data-goto=".page__section_2" href="#" class="menu__link">Service</a> </li>
 												<li> <a data-goto=".page__section_3" href="#" class="menu__link">Clients</a> </li>
 												<li> <a data-goto=".page__section_3" href="#" class="menu__link">Contact</a> </li>
@@ -30,7 +30,7 @@
 													<span class="menu__arrow"></span>
 													<ul class="menu__sub-list">
 														<li>
-															<a href="bio.html" class="menu__sub-link">Biography</a>
+															<a href="bio" class="menu__sub-link">Biography</a>
 														</li>
 														<li>
 															<a href="#" class="menu__sub-link">Services</a>
@@ -44,7 +44,7 @@
 													</ul>
 												</li>
 												<li>
-													<a href="parallax.html" class="menu__link">Параллакс эффект</a>
+													<a href="parallax" class="menu__link">Параллакс эффект</a>
 												</li>
 												<li>
 												</li>
