@@ -29,31 +29,17 @@
 										</div>
 										<nav class="menu__body">
 											<ul class="menu__list">
-												<li> <a data-goto=".page__section_1" href="#" class="menu__link">Service</a> </li>
-												<li> <a data-goto=".page__section_2" href="#" class="menu__link">Clients</a> </li>
-												<li> <a data-goto=".page__section_3" href="#" class="menu__link">Contact</a> </li>
-												<li>
-													<a href="" class="menu__link">Страница №1</a> 
-													<span class="menu__arrow"></span>
-													<ul class="menu__sub-list">
-														<li>
-															<a href="#" class="menu__sub-link">Services</a>
-														</li>
-														<li>
-															<a href="#" class="menu__sub-link">Clients</a>
-														</li>
-														<li>
-															<a href="#" class="menu__sub-link">Contact</a>
-														</li>
-													</ul>
-												</li>
 												<li>
 													<a href="<?php Controller_Main::redirect_echo('target');?>" class="menu__link tasks">Задания</a>
 												</li>
+												<li> <a href="#popup" class="menu__link header__phone popup-link">Попап №1</a> </li>
 
 												<?php Controller_main::menu_body_list_account();?>
 												
 												<li>
+												<li>
+													<a href="<?php Controller_Main::redirect_echo('travel_team');?>"> Путешствие для руководителей</a>
+												</li>
 													<select class="change__lang">
 														<option value="en">EN</option>
 														<option selected value="ru">RU</option>
@@ -176,6 +162,30 @@
 														<p class="rezeme__item__4">Знания модели OSI & TSP/IP.</p>
 														<p class="rezeme__item__5">Базовые знания HTML&CSS&JS.</p>
 														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+														<p class="rezeme__item__6">Начальные знания Git & Linux.</p>
+
 													</div>
 												</div>
 											</div>
@@ -192,7 +202,7 @@
 					<div id="popup" class="popup">
 						<div class="popup__body">
 							<div class="popup__content">
-								<a href="" class="popup__close"></a>
+								<a href="#header" class="popup__close">X</a>
 								<div class="popup__title">Это модальное окно №1</div>
 								<div class="popup__text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -210,6 +220,7 @@
  					<div class="footer__text">Бабаков Степан Евгеньевич 2021</div>
  				</div>
 		    </footer>
+		    <script type="text/javascript" src="js/popup.js"></script>
 		    <script type="text/javascript" src="js/lang.js"></script>
 			<script type="text/javascript" src="js/script.js"></script>
 			<script type="text/javascript" src="js/calendar.js"></script>
