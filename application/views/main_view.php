@@ -30,6 +30,9 @@
 										<nav class="menu__body">
 											<ul class="menu__list">
 												<li>
+													<a class="menu__link travel" href="<?php Controller_Main::redirect_echo('travel_team');?>"> Путешствия для руководителей</a>
+												</li>
+												<li>
 													<a href="<?php Controller_Main::redirect_echo('target');?>" class="menu__link tasks">Задания</a>
 												</li>
 												<li> <a href="#popup" class="menu__link header__phone popup-link">Попап №1</a> </li>
@@ -37,9 +40,6 @@
 												<?php Controller_main::menu_body_list_account();?>
 												
 												<li>
-												<li>
-													<a href="<?php Controller_Main::redirect_echo('travel_team');?>"> Путешствие для руководителей</a>
-												</li>
 													<select class="change__lang">
 														<option value="en">EN</option>
 														<option selected value="ru">RU</option>
