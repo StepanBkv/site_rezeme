@@ -38,15 +38,19 @@
 						<div class="sect__wrap">
 							<div class="img_sect_wrap">
 								<img src="img/mount_travel_1.jpg">
-								<div class="sect_wrap_block">
-									<div class="sect_wrap_block_d sect_wrap_block_1">
-										
-									</div>
-									<div class="sect_wrap_block_d sect_wrap_block_2">
-										
-									</div>
-									<div class="sect_wrap_block_d sect_wrap_block_3">
-										
+							</div>
+
+							<div class="sect_wrap_block">
+								<div class="sect_wrap_block_d sect_wrap_block_1">
+									
+								</div>
+								<div class="sect_wrap_block_d sect_wrap_block_2">
+									
+								</div>
+								<div class="sect_wrap_block_d sect_wrap_block_3">
+									<div class="block__content">
+										<div class="div_line"></div>
+										<p>This is a majestic landscape of mountains, deep valleys and glaciers, dominated by Mount Everest (otherwise known as Sagarmatha in Nepali) at 8,848m above sea level. </p>
 									</div>
 								</div>
 							</div>
