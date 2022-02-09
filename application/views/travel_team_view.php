@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Путешествия</title>
-		<link rel="stylesheet" type="text/css" href="css/travel_team.css">ink	
+		<link rel="stylesheet" type="text/css" href="css/travel_team.css">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -12,7 +12,7 @@
 				<div class="page">
 					<div class="container">
 						<header class="header">
-							<div class="headear__container"> 
+							<div class="header__container"> 
 
 								<a href="#" class="header__logo">
 									<img class ="icon__image" src="img/logo_travel_team.png" alt="main foto"> 
@@ -25,11 +25,33 @@
 							            </span>
 						            </button>
 					            </form>
-					            
+
+					            <div class="header__menu menu">
+					           		<div class="menu__icon">
+					           			<span></span>
+					           		</div>
+					            </div>
 							</div>
 						</header>
 					</div>
-					<section class="sect_1"></section>	
+					<section class="sect__1">
+						<div class="sect__wrap">
+							<div class="img_sect_wrap">
+								<img src="img/mount_travel_1.jpg">
+								<div class="sect_wrap_block">
+									<div class="sect_wrap_block_d sect_wrap_block_1">
+										
+									</div>
+									<div class="sect_wrap_block_d sect_wrap_block_2">
+										
+									</div>
+									<div class="sect_wrap_block_d sect_wrap_block_3">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>	
 					<section class="sect_2"></section>
 					<section class="sect_3"></section>
 					<section class="sect_4"></section>	
