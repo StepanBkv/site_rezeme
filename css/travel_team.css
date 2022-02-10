@@ -241,17 +241,58 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1040px;
+  width: 96%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 .sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_d {
   height: 620px;
-  width: 50%;
+  width: 33%;
 }
 .sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_1 {
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 27%;
+}
+.sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_1 .block__content_1 {
+  width: 80%;
+  height: 84%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_1 .block__content_1 .text__h2 {
+  font-family: Oswald;
+}
+.sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_1 .block__content_1 .text__1 {
+  font-size: 59px;
+  font-weight: 700;
+  color: #44c4a1;
+  line-height: 61.2px;
+  margin-bottom: 10px;
+}
+.sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_1 .block__content_1 .text__2 {
+  color: #d67818;
+  line-height: 38.25px;
+  font-weight: 400;
+  font-size: 31.875px;
+  font-family: "Palanquin Dark";
+}
+.sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_2 {
+  width: 40%;
 }
 .sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_3 {
   background-color: #e79916;
@@ -285,18 +326,23 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-order: 1;
           order: 1;
   width: 60px;
-  height: 3px;
+  height: 6px;
   -webkit-transform-origin: left center;
           transform-origin: left center;
   margin: 0 auto 0 0;
   background-color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .sect__1 .sect__wrap .sect_wrap_block .sect_wrap_block_3 .block__content p {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.6;
   color: #fff;
+}
+
+.mount__svg {
+  width: 109px;
+  height: 109px;
 }

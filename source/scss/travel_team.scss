@@ -125,15 +125,44 @@
             position: absolute;
             top:0;
             left:0;
-            width:1040px;
+            width: 96%;
             display: flex;
 
             .sect_wrap_block_d {
                 height: 620px;
-                width: 50%; 
+                width: 33%; 
             }
             .sect_wrap_block_1 {
                 background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 27%; 
+                .block__content_1 {
+                    width: 80%;
+                    height: 84%;
+                    display: flex;
+                    flex-direction: column;
+                    .text__h2{
+                        font-family: Oswald;                    }
+                    .text__1 {
+                        font-size: 59px;
+                        font-weight: 700;
+                        color :rgb(68, 196, 161);
+                        line-height: 61.2px;
+                        margin-bottom: 10px; 
+                    }
+                    .text__2 {
+                        color: rgb(214, 120, 24);
+                        line-height: 38.25px;
+                        font-weight: 400;
+                        font-size: 31.875px;
+                        font-family: "Palanquin Dark"; 
+                    }   
+                }
+            }
+            .sect_wrap_block_2 {
+                width: 40%;
             }
             .sect_wrap_block_3 {
                 background-color: #e79916;
@@ -150,16 +179,16 @@
                     .div_line{
                         order:1;
                         width: 60px;
-                        height: 3px;
+                        height: 6px;
                         transform-origin: left center;
                         margin: 0 auto 0 0;
                         background-color: #fff;
-                        margin-bottom: 10px;
+                        margin-bottom: 20px;
                     }
                     p {
                         order: 2;
-                        font-size: 16px;
-                        line-height: 1.5;
+                        font-size: 20px;
+                        line-height: 1.6;
                         color: #fff;
                     }
                 }
@@ -168,3 +197,7 @@
     }
 }
 
+.mount__svg{
+    width: 109px;
+    height: 109px;
+}
