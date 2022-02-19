@@ -82,11 +82,10 @@
 					<section class="sect__2">
 						<div class="sect__wrap">
 							 <div class="sect_wrap_block">
-
 							 	<div class="sect_wrap_block_d sect_wrap_block_1">
 							 		<div class="block__content">
 							 			<div class="block__img">
-							 				<img src="img/travel_1.jpg">
+							 				<img src="img/travel_1_min.png">
 							 			</div>
 							 			<div class="block_wrap_text">
 								 			<div class="block__text">
@@ -97,15 +96,61 @@
 							 		</div>
 							 	</div>
 							 	<div class="sect_wrap_block_d sect_wrap_block_2">
-							 		
+							 		<div class="block__content">
+							 			<div class="block__img">
+							 				<img src="img/mount_travel_2.jpg">
+							 			</div>
+							 			<div class="block_wrap_text">
+								 			<div class="block__text">
+								 				<h6>02</h6>
+								 				<p>When the mind is perfectly still, our soul expresses. Enroll for weekly quote. God is neutral. Spiritual teachings. Greater understanding. A philosophy for living.</p>
+								 			</div>
+							 			</div>
+							 		</div>
 							 	</div>
 							 	<div class="sect_wrap_block_d sect_wrap_block_3">
-							 		
+							 		<div class="block_wrap_text">
+							 			<div class="block_text">
+							 				<p>Tristique sollicitudin nibh sit amet commodo nulla. Volutpat consequat mauris nunc congue nisi vitae suscipit. Donec massa sapien faucibus et. Morbi tincidunt ornare massa eget. Massa massa ultricies mi quis hendrerit dolor magna eget. Facilisis mauris sit amet massa vitae tortor condimentum lacinia. Feugiat nibh sed pulvinar proin gravida hendrerit.</p>
+							 			</div>	
+							 		</div>
 							 	</div> 
 							 </div>
 						</div>
 					</section>
-					<section class="sect__3"></section>
+					<section class="sect__3">
+						<div class="sect__wrap">
+							<div class="sect_wrap_block">
+								<div class="title">
+									<h2>
+										Meet to Team
+									</h2>
+								</div>
+								<div class="block__content">
+									<div class="content__wrap">
+										<div class="orange__block">
+											
+										</div>
+										<div class="person__wrap">
+											<div class="person person__1">
+												<img src="img/travel_2.jpg">
+											</div>
+										</div>
+										<div class="person__wrap">
+											<div class="person person__2">
+												<img src="img/travel_3.jpg">
+											</div>
+										</div>
+										<div class="person__wrap">
+											<div class="person person__3">
+												<img src="img/travel_4.jpg">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					<section class="sect__4"></section>	
 					<section class="sect__5"></section>
 					<section class="sect__6"></section>

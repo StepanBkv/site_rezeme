@@ -120,6 +120,7 @@
             img {
                 max-height: 653px;
                 width: 100%;
+                overflow: hidden;
             }
         }
         .sect_wrap_block{  
@@ -138,7 +139,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 33%;
+                width: 31%;
 
                 .block__content_1 {
                     width: 80%;
@@ -153,7 +154,7 @@
                         font-family: Oswald;                    
                     }
                     .text__1 {
-                        font-size: 59px;
+                        font-size: 51px;
                         font-weight: 700;
                         color :rgb(68, 196, 161);
                         line-height: 61.2px;
@@ -163,7 +164,7 @@
                         color: rgb(214, 120, 24);
                         line-height: 38.25px;
                         font-weight: 400;
-                        font-size: 37px;
+                        font-size: 31.25px;
                         font-family: "Palanquin Dark"; 
                     }
                     .div__socnet {
@@ -191,18 +192,19 @@
                 width: 48%;
             }
             .sect_wrap_block_3 {
-                background-color: #e79916;
-                opacity: .8;
+                background-color: rgb(214, 120, 24);
+                opacity: .9;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 39%; 
                 .block__content {
-                    width: 80%;
-                    height: 91%;
+                    width: 100%;
+                    height: 100%;
                     display: flex;
                     justify-content: flex-end;
                     flex-direction: column;
+                    padding: 49px;
                     .div_line{
                         order:1;
                         width: 60px;
@@ -213,10 +215,12 @@
                         margin-bottom: 20px;
                     }
                     p {
+                        opacity: .6;
                         order: 2;
-                        font-size: 21px;
-                        line-height: 1.6;
+                        font-size: 21.25px;
+                        line-height: 36.1333px;
                         color: #fff;
+                        font-weight: 300;
                     }
                 }
             }
@@ -225,10 +229,11 @@
 }
 
 .sect__2 {
-    height: 801px;
+    height: 701px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
     .sect__wrap {
         height: 100%;
         width: 89%;
@@ -236,49 +241,133 @@
             display: flex;
             height: 100%;
             .sect_wrap_block_d {
-                background-color: red;
-                width: 33.3333%;
+                flex: 0 1 33.3333%;
                 
             }
             .sect_wrap_block_1 {
                 background-color: #fff;
                 .block__content {
+                    height: 100%;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-end;
                     align-items: center;
-                    .block__img {
-                        height: 300px;
+                    .block__img{
+                        height: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
                         img {
-                            height: 50%;
+                            width: 90%;
+                        }
+                     }
+                    .block_wrap_text {
+                        height: 70%;
+                        display: flex;
+                        align-items: flex-end;   
+                        .block__text {
+                            background-color: rgb(224, 229, 235);
+                            width: 93%;
+                            height: 100%;
+                            padding: 20px;
+                            h6 {
+                                font-family: Lato;
+                                font-size: 31.875px;
+                                font-weight: 900;
+                                letter-spacing: 5px;
+                                line-height: 40px;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                            p {
+                                margin-top:18px;
+                                width: 90%;
+                                font-family: Lato, sans-serif;
+                                font-size: 17px;
+                                font-weight: 400;
+                                line-height: 27.2px;
+                                text-align: left;
+                                overflow-wrap: break-word
+                            }
+                        }
+                    }
+                }
+            }
+            .sect_wrap_block_2 {
+                .block__content {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    .block__img {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            object-fit: fill;
+                            overflow: hidden;
                             width: 100%;
-                            
+                            height: 100%;
+
                         }
                     }
                     .block_wrap_text {
-                        height: 500px;
-                        display: flex;   
-                        justify-content: center;
-                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-end; 
                         .block__text {
-                            background-color: rgb(224, 229, 235);
-                            width: 90%;
-                            height: 300px; 
+                            background-color: rgb(214, 120, 24);
+                            padding: 20px;
+                            height: 50%;
+                            width: 75%;
+                            margin-bottom: 5px;
                             h6 {
                                 font-family: Lato;
-                                font-size: 35px;
+                                font-size: 31.875px;
                                 font-weight: 900;
                                 letter-spacing: 5px;
-                                line-height: 40px
+                                line-height: 40px;
+                                padding-top: 20px;
+                                padding-bottom: 20px;
+                                color: #fff;
                             }
                             p {
+                                color: #fff;
+                                margin-top:18px;
                                 width: 90%;
-                                font-family: Lato;
-                                font-size: 30px;
-                                font-weight: 400;
-                                letter-spacing: 1px;
-                                line-height: 35px
+                                font-family: Lato, sans-serif;
+                                font-size: 17px;
+                                font-weight: 500;
+                                line-height: 27.2px;
+                                text-align: left;
+                                overflow-wrap: break-word
                             }
+                        }
+                    }
+                }
+            }
+            .sect_wrap_block_3 {
+                .block_wrap_text {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .block_text {
+                        p {
+                            box-sizing: border-box;
+                            padding: 30px;
+                            color: rgb(153, 153, 153);
+                            font-family: Lato, sans-serif;
+                            font-size: 17px;
+                            font-weight: 500;
+                            line-height: 27.2px;
+                            text-align: left;
+                            overflow-wrap: break-word
                         }
                     }
                 }
@@ -286,4 +375,60 @@
         }
 
     }
+}
+.sect__3 {
+    margin-top: 70px;
+    height: 711px;
+    .sect__wrap {
+        width: 100%;
+        height: 100%;
+        .sect_wrap_block {
+            width: 100%;
+            height: 100%;
+            .title {
+                padding-top: 70px;
+                display: flex;
+                justify-content: center;
+                align-content: flex-start;
+                h2 {
+                    color: rgb(214, 120, 24);
+                    font-size: 63.75px;
+                    font-weight: 700;
+                    line-height: 76.5px;
+                }
+            }
+            .block__content{
+                width: 100%;
+                height: 100%;
+                .content__wrap {
+                    width: 100%;
+                    height: 100%;
+                    .orange__block {
+                        width: 100%;
+                        height: 193px;
+                        background-color: rgb(214, 120, 24);
+                    }
+                    .person__wrap {
+                        display: flex;
+                        flex-direction: colomn;
+                        .person {
+
+                        }
+                        .person__1 {
+
+                        }
+                        .person__2 {
+
+                        }
+                        .person__3 {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.sect__4 {
+    height: 711px;
 }
