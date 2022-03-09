@@ -129,21 +129,37 @@
 								<div class="block__content">
 									<div class="content__wrap">
 										<div class="orange__block">
-											
-										</div>
-										<div class="person__wrap">
-											<div class="person person__1">
-												<img src="img/travel_2.jpg">
 											</div>
-										</div>
-										<div class="person__wrap">
-											<div class="person person__2">
-												<img src="img/travel_3.jpg">
+										<div class="person_wrap_block">
+											<div class="person__wrap">
+												<div class="person person__1">
+													<div class="img__block">
+														<img src="img/travel_2.jpg">
+													</div>
+													<h5>Adam Jonson</h5>
+													<h6>Chief Operating Officer</h6>
+													<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+												</div>
 											</div>
-										</div>
-										<div class="person__wrap">
-											<div class="person person__3">
-												<img src="img/travel_4.jpg">
+											<div class="person__wrap">
+												<div class="person person__2">
+													<div class="img__block">
+														<img src="img/travel_3.jpg">
+													</div>
+													<h5>Marry Hudson</h5>
+													<h6>Director of Marketing</h6>
+													<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+												</div>
+											</div>
+											<div class="person__wrap">
+												<div class="person person__3">
+													<div class="img__block">
+														<img src="img/travel_4.jpg">
+													</div>
+													<h5>Bob Larson</h5>
+													<h6>Relationship Manager</h6>
+													<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -151,7 +167,36 @@
 							</div>
 						</div>
 					</section>
-					<section class="sect__4"></section>	
+					<section class="sect__4">
+						<div class="sect__wrap">
+							<div class="sect_wrap_block">
+								<div class="block__grey">
+									
+								</div>
+								<div class="block__foto">
+									<div class="foto foto__1">
+										<img src="img/mount_travel_5.jpg">
+									</div>
+									<div class="foto foto__2">
+										<img src="img/mount_travel_3.jpg">
+									</div>
+									<div class="foto foto__3">
+										<img src="img/mount_travel_4.jpg">
+									</div>
+								</div>
+								<div class="block__text">
+									<div class="block_text_row">
+										<div class="block_text_1">
+											<h2>How We Work With You</h2>
+										</div>
+										<div class="block_text_2">
+											<p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</section>	
 					<section class="sect__5"></section>
 					<section class="sect__6"></section>
 					<section class="sect__7"></section>

@@ -284,12 +284,13 @@
                             p {
                                 margin-top:18px;
                                 width: 90%;
-                                font-family: Lato, sans-serif;
+                                font-family: Lato;
                                 font-size: 17px;
                                 font-weight: 400;
                                 line-height: 27.2px;
                                 text-align: left;
-                                overflow-wrap: break-word
+                                overflow-wrap: break-word;
+                                padding-right: 0px;
                             }
                         }
                     }
@@ -323,7 +324,7 @@
                             background-color: rgb(214, 120, 24);
                             padding: 20px;
                             height: 50%;
-                            width: 75%;
+                            width: 80%;
                             margin-bottom: 5px;
                             h6 {
                                 font-family: Lato;
@@ -339,7 +340,7 @@
                                 color: #fff;
                                 margin-top:18px;
                                 width: 90%;
-                                font-family: Lato, sans-serif;
+                                font-family: Lato;
                                 font-size: 17px;
                                 font-weight: 500;
                                 line-height: 27.2px;
@@ -378,6 +379,7 @@
 }
 .sect__3 {
     margin-top: 70px;
+    margin-bottom: 60px;
     height: 711px;
     .sect__wrap {
         width: 100%;
@@ -401,27 +403,70 @@
                 width: 100%;
                 height: 100%;
                 .content__wrap {
-                    width: 100%;
                     height: 100%;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     .orange__block {
                         width: 100%;
                         height: 193px;
                         background-color: rgb(214, 120, 24);
                     }
-                    .person__wrap {
+                    .person_wrap_block{
+                        position: absolute;
+                        top: 20%;
+                        left: 0;
+                        width: 100%;
                         display: flex;
-                        flex-direction: colomn;
-                        .person {
+                        justify-content: center;
+                        align-items: center;
+                        .person__wrap {
+                            margin: 20px;
+                            .person {
+                                padding-top: 20px;
+                                width: 359px;
+                                height: 405px;
+                                background-color: rgb(242, 242, 242);
+                                .img__block {
+                                    width: 100%;
+                                    text-align: center;
+                                    margin-bottom: 20px;
+                                    img {
+                                        border-radius: 50%;
+                                        height: 180px;
+                                        width: 180px;
+                                    }
+                                }
 
-                        }
-                        .person__1 {
+                                h5 {
+                                    font-family: Lato;
+                                    color: rgb(17, 17, 17);
+                                    text-align: center;
+                                    font-size: 21.25px;
+                                    font-weight: 700;
+                                    line-height: 25.5px;
+                                    margin-bottom: 5px;
+                                }
 
-                        }
-                        .person__2 {
+                                h6 {
+                                    font-family: Lato;
+                                    text-align: center;
+                                    font-size: 17px;
+                                    font-weight: 400;
+                                    letter-spacing: 3px;
+                                    margin-bottom: 10px;
+                                }
 
-                        }
-                        .person__3 {
-
+                                p {
+                                    text-align: center;
+                                    margin: 0 30px;
+                                    font-family: Lato;
+                                    font-size: 17px;
+                                    font-weight: 400;
+                                    line-height: 27.2px;
+                                }
+                            }
                         }
                     }
                 }
@@ -430,5 +475,74 @@
     }
 }
 .sect__4 {
-    height: 711px;
+    height: 884px;
+    .sect__wrap {
+        height: 100%;
+        width: 100%;
+        .sect_wrap_block {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+           
+            align-items: center;
+            .block__grey {
+                height: 100%;
+                width: 55%;
+                top: 0;
+                left: 17%;
+                position: absolute;
+                background-color: rgb(229, 229, 229);
+            }
+            .block__foto {
+                z-index: 2;
+                height: 61%;
+                width: 90%;
+                padding-bottom: -40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+                .foto {
+                    margin: 0 8px 0;
+                    img {
+                        width: 368px;
+                        height: 397px;
+                    }
+                }
+            }
+            .block__text {
+                z-index: 2;
+                width: 88%;
+                .block_text_row {
+                    display: flex;
+                    .block_text_1 {
+                        width: 50%;
+                        margin-right: 50px;
+                        h2 {
+                            color: rgb(214, 120, 24);
+                            font-family: "Palanquin Dark";
+                            font-size: 63.75px;
+                            font-weight: 700;
+                            line-height: 63.75px;
+                            
+                        }
+                    }
+                    .block_text_2 {
+                        width: 50%;
+                        p { 
+                            color: rgb(85, 92, 102);
+                            font-family: Lato;
+                            font-size: 17px;
+                            font-weight: 700;
+                            letter-spacing: 2px;
+                            line-height: 27.2px;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
