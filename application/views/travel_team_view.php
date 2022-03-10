@@ -249,24 +249,26 @@
 								</div>
 								<div class="block__content">
 									<div class="block__foto">
-										
+										<img src="img/mount_travel_4.jpg">
 									</div>
 									<div class="block__text">
 										<div class="title">
-											
+											<h2>Plan your next escape with total peace of mind</h2>
 										</div>
 										<div class="content">
-											
+											<p>Ut tellus elementum sagittis vitae et leo duis. Nisi est sit amet facilisis magna etiam. Odio facilisis mauris sit amet massa vitae tortor. Eros donec ac odio tempor orci dapibus ultrices in. </p>
 										</div>
 										<div class="anchor">
-											
+											<a href="#">learn more</a>
 										</div>
 									</div>	
 								</div>
 							</div>
 						</div>
 					</section>
-					<section class="sect__7"></section>
+					<section class="sect__7">
+						
+					</section>
 				</div>
 			</div>
 		</div>
