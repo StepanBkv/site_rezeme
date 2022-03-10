@@ -197,8 +197,75 @@
 							</div>
 						</div>
 					</section>	
-					<section class="sect__5"></section>
-					<section class="sect__6"></section>
+					<section class="sect__5">
+						<div class="sect__wrap">
+							<div class="sect_wrap_block">
+								<div class="block__img">
+									<img src="img/mount_travel_6.jpg">
+								</div>
+								<div class="block__content">
+									<div class="block__title">
+										<h1>Things to do</h1>
+									</div>
+									<div class="text__row">
+										<div class="block_text block_text_1">
+											<h4>Adventures</h4>
+											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+											<div class="ancorh">
+												<a href="#">learn more</a>
+											</div>
+										</div>
+										<div class="block_text block_text_2">
+											<h4>Shopping</h4>
+											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+											<div class="ancorh">
+												<a href="#">learn more</a>
+											</div>
+										</div>
+										<div class="block_text block_text_3">
+											<h4>Art & Culture</h4>
+											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+											<div class="ancorh">
+												<a href="#">learn more</a>
+											</div>
+										</div>
+										<div class="block_text block_text_4">
+											<h4>Family Fun</h4>
+											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+											<div class="anchor">
+												<a href="#">learn more</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="sect__6">
+						<div class="sect__wrap">
+							<div class="sect_wrap_block">
+								<div class="block__orange">
+									
+								</div>
+								<div class="block__content">
+									<div class="block__foto">
+										
+									</div>
+									<div class="block__text">
+										<div class="title">
+											
+										</div>
+										<div class="content">
+											
+										</div>
+										<div class="anchor">
+											
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</section>
 					<section class="sect__7"></section>
 				</div>
 			</div>
