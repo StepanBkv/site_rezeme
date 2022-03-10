@@ -211,21 +211,21 @@
 										<div class="block_text block_text_1">
 											<h4>Adventures</h4>
 											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-											<div class="ancorh">
+											<div class="anchor">
 												<a href="#">learn more</a>
 											</div>
 										</div>
 										<div class="block_text block_text_2">
 											<h4>Shopping</h4>
 											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-											<div class="ancorh">
+											<div class="anchor">
 												<a href="#">learn more</a>
 											</div>
 										</div>
 										<div class="block_text block_text_3">
 											<h4>Art & Culture</h4>
 											<p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-											<div class="ancorh">
+											<div class="anchor">
 												<a href="#">learn more</a>
 											</div>
 										</div>
