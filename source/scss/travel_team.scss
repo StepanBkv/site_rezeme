@@ -667,10 +667,9 @@
                 .block__foto {
                     margin-right: 60px;
                     img {
-                        object-fit: contain;
+                        object-fit: cover;
                         height: 708px;
                         width: 550px;
-                        overflow: hidden;
                     }
                 }
                 .block__text {
@@ -722,5 +721,61 @@
 }
 
 .sect__7 {
-    height: 750px;
+    height: 726px;
+    .sect__wrap {
+        .sect_wrap_block {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            .title {
+                margin-top: 60px;
+                margin-bottom: 70px;
+                .title__row {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    h2 {
+                        font-weight: 700;
+                        line-height: 1.2;
+                        font-size: 3.75rem;
+                        font-family: 'Palanquin Dark';
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                    h5 {
+                        line-height: 1.2;
+                        font-weight: 700;
+                        font-size: 0.875rem;
+                        font-family: Montserrat, sans-serif !important;
+                        text-align: center;
+                        width: 448px;
+                    }
+                }
+            }
+            .foto {
+                .foto__row {
+                    display: flex;
+                    .foto__block {
+                        margin-right: 10px;
+                        &:last-child{
+                            margin: 0;
+                        }
+                        img {
+                            width: 295px;
+                            height: 354px;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .footer__wrap {
+        
+    }
 }

@@ -919,11 +919,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 60px;
 }
 .sect__6 .sect__wrap .sect_wrap_block .block__content .block__foto img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 708px;
   width: 550px;
-  overflow: hidden;
 }
 .sect__6 .sect__wrap .sect_wrap_block .block__content .block__text {
   -webkit-box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
@@ -971,5 +970,72 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sect__7 {
-  height: 750px;
+  height: 726px;
+}
+.sect__7 .sect__wrap .sect_wrap_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sect__7 .sect__wrap .sect_wrap_block .title {
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+.sect__7 .sect__wrap .sect_wrap_block .title .title__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sect__7 .sect__wrap .sect_wrap_block .title .title__row h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 3.75rem;
+  font-family: "Palanquin Dark";
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sect__7 .sect__wrap .sect_wrap_block .title .title__row h5 {
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 0.875rem;
+  font-family: Montserrat, sans-serif !important;
+  text-align: center;
+  width: 448px;
+}
+.sect__7 .sect__wrap .sect_wrap_block .foto .foto__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.sect__7 .sect__wrap .sect_wrap_block .foto .foto__row .foto__block {
+  margin-right: 10px;
+}
+.sect__7 .sect__wrap .sect_wrap_block .foto .foto__row .foto__block:last-child {
+  margin: 0;
+}
+.sect__7 .sect__wrap .sect_wrap_block .foto .foto__row .foto__block img {
+  width: 295px;
+  height: 354px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

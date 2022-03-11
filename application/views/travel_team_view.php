@@ -249,7 +249,7 @@
 								</div>
 								<div class="block__content">
 									<div class="block__foto">
-										<img src="img/mount_travel_4.jpg">
+										<img src="img/mount_travel_11.jpg">
 									</div>
 									<div class="block__text">
 										<div class="title">
@@ -267,7 +267,33 @@
 						</div>
 					</section>
 					<section class="sect__7">
-						
+						<div class="sect__wrap">
+							<div class="sect_wrap_block">
+								<div class="title">
+									<div class="title__row">
+										<h2>
+											Tours Nature and Wildlife
+										</h2>
+										<h5>
+											Pharetra magna ac placerat vestibulum lectus mauris ultrices. Ut pharetra sit amet aliquam id.
+										</h5>
+									</div>
+								</div>
+								<div class="foto">
+									<div class="foto__row">
+										<div class="foto__block foto_block_1">
+											<img src="img/mount_travel_8.jpeg">
+										</div>
+										<div class="foto__block foto_block_2">
+											<img src="img/mount_travel_9.jpeg">
+										</div>
+										<div class="foto__block foto_block_3">
+											<img src="img/mount_travel_10.jpeg">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
@@ -276,6 +302,8 @@
 	</body>
 
 	<footer>
-		
+		<div class="footer__wrap">
+			
+		</div>
 	</footer>
 </html>
