@@ -874,6 +874,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 30px 10px;
   color: #fff;
 }
+.sect__5 .sect__wrap .sect_wrap_block .block__content .text__row .block_text .anchor a:hover {
+  background-color: #fff;
+  color: #d67818;
+}
 
 .sect__6 {
   height: 828px;
@@ -960,13 +964,17 @@ h1, h2, h3, h4, h5, h6 {
 .sect__6 .sect__wrap .sect_wrap_block .block__content .block__text .anchor a {
   border-style: solid;
   border-color: #d67818 !important;
-  color: #d67818 !important;
+  color: #d67818;
   font-family: Montserrat, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1rem;
   padding: 10px 38px;
   border-width: 2px;
+}
+.sect__6 .sect__wrap .sect_wrap_block .block__content .block__text .anchor a:hover {
+  background-color: #d67818;
+  color: #fff;
 }
 
 .sect__7 {
@@ -1038,4 +1046,197 @@ h1, h2, h3, h4, h5, h6 {
   height: 354px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+footer {
+  height: 506px;
+  background-color: #d67818;
+}
+footer .footer__wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer__wrap .footer_wrap_block {
+  max-width: 1140px;
+  max-height: 386px;
+  height: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .footer__wrap .footer_wrap_block .footer_block {
+  padding: 30px;
+  height: 100%;
+  text-align: left;
+  word-wrap: break-word;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3333%;
+          flex: 0 0 33.3333%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer__wrap .footer_wrap_block .footer_block:last-child {
+  margin: 0;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.3333%;
+          flex: 0 1 33.3333%;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_1 h3 {
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-family: "Palanquin Dark";
+  font-weight: 700;
+  font-size: 2.25rem;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_1 p {
+  color: #fff;
+  font-family: Lato, sans-serif !important;
+  font-weight: 700;
+  line-height: 1.8;
+  font-style: italic;
+  font-size: 1.35rem;
+  margin: 20px 0 0;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_1 .anchor {
+  white-space: nowrap;
+  height: 32px;
+  min-height: 16px;
+  width: 200px;
+  min-width: 120px;
+  margin: 27px auto 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_1 .anchor .a_block {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 28.33333333%;
+          flex: 0 1 28.33333333%;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_2 h6 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Palanquin Dark";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_2 .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_2 .text p {
+  color: #fff;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin: 0 148px 20px 0;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_2 .text_2 p {
+  margin: 0 62px 18px 0;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 38.33333333%;
+          flex: 0 1 38.33333333%;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 12px;
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form input::-webkit-input-placeholder {
+  font-family: Lato, sans-serif;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form input::-moz-placeholder {
+  font-family: Lato, sans-serif;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form input:-ms-input-placeholder {
+  font-family: Lato, sans-serif;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form input::-ms-input-placeholder {
+  font-family: Lato, sans-serif;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form input::placeholder {
+  font-family: Lato, sans-serif;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form textarea {
+  width: 100%;
+  width: 376px;
+  height: 140px;
+  margin-bottom: 10px;
+}
+footer .footer__wrap .footer_wrap_block .footer_block_3 form button {
+  width: 100%;
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #000;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: Lato, sans-serif;
 }
