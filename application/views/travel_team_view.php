@@ -120,16 +120,14 @@
 					</section>
 					<section class="sect__3">
 						<div class="sect__wrap">
-							<div class="sect_wrap_block">
 								<div class="title">
 									<h2>
 										Meet to Team
 									</h2>
 								</div>
-								<div class="block__content">
-									<div class="content__wrap">
-										<div class="orange__block">
+								<div class="orange__block">
 											</div>
+								<div class="block__content">
 										<div class="person_wrap_block">
 											<div class="person__wrap">
 												<div class="person person__1">
@@ -162,9 +160,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
 								</div>
-							</div>
 						</div>
 					</section>
 					<section class="sect__4">
@@ -199,7 +195,6 @@
 					</section>	
 					<section class="sect__5">
 						<div class="sect__wrap">
-							<div class="sect_wrap_block">
 								<div class="block__img">
 									<img src="img/mount_travel_6.jpg">
 								</div>
@@ -238,7 +233,6 @@
 										</div>
 									</div>
 								</div>
-							</div>
 						</div>
 					</section>
 					<section class="sect__6">
