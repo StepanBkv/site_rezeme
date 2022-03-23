@@ -129,6 +129,9 @@
 											</div>
 								<div class="block__content">
 										<div class="person_wrap_block">
+											<div class="person__item">
+												<div class="person_item_block">
+													
 											<div class="person__wrap">
 												<div class="person person__1">
 													<div class="img__block">
@@ -160,14 +163,20 @@
 												</div>
 											</div>
 										</div>
+									</div>
+									</div>
 								</div>
 						</div>
 					</section>
 					<section class="sect__4">
 						<div class="sect__wrap">
 							<div class="sect_wrap_block">
-								<div class="block__grey">
-									
+								<div class="grey">
+									<div class="block__grey">
+										<div class="block_grey_item">
+											
+										</div>
+									</div>
 								</div>
 								<div class="block__foto">
 									<div class="foto foto__1">
@@ -181,12 +190,16 @@
 									</div>
 								</div>
 								<div class="block__text">
-									<div class="block_text_row">
-										<div class="block_text_1">
-											<h2>How We Work With You</h2>
+									<div class="block_item_row">
+										<div class="block_item block_item_1">
+											<h2>
+											How We Work With You
+											</h2>		
 										</div>
-										<div class="block_text_2">
-											<p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+										<div class="block_item block_item_2">
+											<p>
+											Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.
+											</p>
 										</div>
 									</div>	
 								</div>
