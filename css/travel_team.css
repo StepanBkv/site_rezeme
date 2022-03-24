@@ -1761,10 +1761,19 @@ footer .footer__wrap .footer_wrap_block .footer_block_3 form button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
   }
-  footer .footer__wrap .footer_wrap_block .footer_block {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 80%;
-            flex: 1 1 80%;
+}
+@media (max-width: 412px) {
+  footer {
+    height: 1150px;
+  }
+  footer .footer__wrap .footer_wrap_block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  footer .footer__wrap .footer_wrap_block .footer_block_1 {
+    margin-bottom: 10px;
   }
 }

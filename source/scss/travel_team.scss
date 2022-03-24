@@ -1713,10 +1713,26 @@ footer {
         .footer__wrap {
             .footer_wrap_block {
                 flex-direction: column;
+                flex-basis: 80%;
                 .footer_block {
-                    flex: 1 1 80%;
                 }
                 .footer_block_3 {
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 412px) {
+    footer {
+        height: 1150px;
+        .footer__wrap {
+            .footer_wrap_block {
+                flex-basis: 100%;
+                .footer_block {
+                }
+                .footer_block_1 {
+                    margin-bottom: 10px;
                 }
             }
         }
