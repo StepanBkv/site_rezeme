@@ -30,7 +30,7 @@
 										<nav class="menu__body">
 											<ul class="menu__list">
 												<li>
-													<a class="menu__link travel" href="<?php Controller_Main::redirect_echo('travel_team');?>"> Путешствия для руководителей</a>
+													<a class="menu__link travel" href="<?php Controller_Main::redirect_echo('travel_team');?>"> Путешествия для руководителей</a>
 												</li>
 												<li>
 													<a href="<?php Controller_Main::redirect_echo('target');?>" class="menu__link tasks">Задания</a>

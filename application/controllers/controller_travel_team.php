@@ -5,5 +5,9 @@
 		{	
 			$this->view->generate('travel_team_view.php');
 		}
+
+		public function redirect_echo ($subject){
+			echo $subject;
+		}
 	}
 ?>
