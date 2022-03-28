@@ -13,9 +13,11 @@
 					<div class="container">
 						<header class="header">
 							<div class="header__container"> 
-								<a href="<?php Controller_travel_team::redirect_echo('main');?>" class="header__logo">
-									<img class ="icon__image" src="img/logo_travel_team.png" alt="main foto"> 
-								</a>
+								<div class="header__logo">
+									<a href="<?php Controller_travel_team::redirect_echo('main');?>" class="header_logo_link">
+										<img class ="icon__image" src="img/logo_travel_team.png" alt="main foto"> 
+									</a>
+								</div>
 								<form class="form__search">
 									<input type="" name="" class="input__header">
 									<button class="search__button">
@@ -24,16 +26,66 @@
 							            </span>
 						            </button>
 					            </form>
-
 					            <div class="header__menu menu">
 					           		<div class="menu__icon">
 					           			<span></span>
 					           		</div>
+					           		<nav class="menu__body">
+					           			<ul class="menu__list">
+					           				<li>
+					           					<a href="<?php Controller_travel_team::redirect_echo('main');?>" class="menu__link">
+					           						Главная страница
+					           					</a>
+					           				</li>
+
+					           				<li>
+					           					<a data-goto=".sect__1"href="#" class="menu__link">
+					           						Раздел №1
+					           					</a>
+					           				</li>
+
+					           				<li>
+					           					<a data-goto=".sect__2"href="#" class="menu__link">
+					           						Раздел №2
+					           					</a>
+					           				</li>
+					           				<li>
+					           					<a data-goto=".sect__3"href="#" class="menu__link">
+					           						Раздел №3
+					           					</a>
+					           				</li>
+					           				<li>
+					           					<a data-goto=".sect__4"href="#" class="menu__link">
+					           						Раздел №4
+					           					</a>
+					           				</li>
+					           				<li>
+					           					<a data-goto=".sect__5"href="#" class="menu__link">
+					           						Раздел №5
+					           					</a>
+					           				</li>
+					           				<li>
+					           					<a data-goto=".sect__6"href="#" class="menu__link">
+					           						Раздел №6
+					           					</a>
+					           				</li>
+					           				<li>
+					           					<a data-goto=".sect__7"href="#" class="menu__link">
+					           						Раздел №7
+					           					</a>
+					           				</li>
+					           				<li>
+					           					<a data-goto=".sect__8"href="#" class="menu__link">
+					           						Ссылки
+					           					</a>
+					           				</li>
+					           			</ul>
+					           		</nav>
 					            </div>
 							</div>
 						</header>
 					</div>
-					<section class="sect__1">
+					<section class="sect sect__1">
 						<div class="sect__wrap">
 							<div class="img_sect_wrap">
 								<img src="img/mount_travel_1.jpg">
@@ -78,7 +130,7 @@
 							</div>
 						</div>
 					</section>	
-					<section class="sect__2">
+					<section class="sect sect__2">
 						<div class="sect__wrap">
 							 <div class="sect_wrap_block">
 							 	<div class="sect_wrap_block_d sect_wrap_block_1">
@@ -117,7 +169,7 @@
 							 </div>
 						</div>
 					</section>
-					<section class="sect__3">
+					<section class="sect sect__3">
 						<div class="sect__wrap">
 								<div class="title">
 									<h2>
@@ -167,7 +219,7 @@
 								</div>
 						</div>
 					</section>
-					<section class="sect__4">
+					<section class="sect sect__4">
 						<div class="sect__wrap">
 							<div class="sect_wrap_block">
 								<div class="grey">
@@ -205,7 +257,7 @@
 							</div>
 						</div>
 					</section>	
-					<section class="sect__5">
+					<section class="sect sect__5">
 						<div class="sect__wrap">
 								<div class="block__img">
 									<img src="img/mount_travel_6.jpg">
@@ -247,7 +299,7 @@
 								</div>
 						</div>
 					</section>
-					<section class="sect__6">
+					<section class="sect sect__6">
 						<div class="sect__wrap">
 							<div class="sect_wrap_block">
 								<div class="block__orange">
@@ -272,7 +324,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="sect__7">
+					<section class="sect sect__7">
 						<div class="sect__wrap">
 							<div class="sect_wrap_block">
 								<div class="title">
@@ -303,7 +355,7 @@
 					</section>
 				</div>
 			</div>
-		<footer>
+		<footer class="footer sect sect__8">
 			<div class="footer__wrap">
 				<div class="footer_wrap_block">
 					<div class="footer_block footer_block_1">

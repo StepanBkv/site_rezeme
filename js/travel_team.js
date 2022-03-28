@@ -1,15 +1,17 @@
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-	let headerNavBar = document.querySelector('.header')
-	let currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		headerNavBar.style.top = "0";
-	}
-	else {
-		headerNavBar.style.top = "-70px";
-	}
-	prevScrollpos = currentScrollPos;
-} 
+"use strict"
+// Код с Владосом, поднятие вверх хэдера вверх, при скроле вниз.
+// let prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+// 	let headerNavBar = document.querySelector('.header')
+// 	let currentScrollPos = window.pageYOffset;
+// 	if (prevScrollpos > currentScrollPos) {
+// 		headerNavBar.style.top = "0";
+// 	}
+// 	else {
+// 		headerNavBar.style.top = "-70px";
+// 	}
+// 	prevScrollpos = currentScrollPos;
+// } 
 
 const isMobile = {
 	Android: function () { 
@@ -37,23 +39,23 @@ const isMobile = {
 	}
 };
 
-if(isMobile.any()) {
-	document.body.classList.add('_touch');
+// if(isMobile.any()) {
+// 	document.body.classList.add('_touch');
 
-	let menuArrows = document.querySelectorAll('.menu__arrow');
-	if(menuArrows.length > 0){
-		for(let index = 0; index < menuArrows.length; index++) {
-			const menuArrow = menuArrows[index];
-			menuArrow.addEventListener("click", function(e) {
-				menuArrow.parentElement.classList.toggle('_active');
-			});
-		}
-	}
-}
+// 	let menuArrows = document.querySelectorAll('.menu__arrow');
+// 	if(menuArrows.length > 0){
+// 		for(let index = 0; index < menuArrows.length; index++) {
+// 			const menuArrow = menuArrows[index];
+// 			menuArrow.addEventListener("click", function(e) {
+// 				menuArrow.parentElement.classList.toggle('_active');
+// 			});
+// 		}
+// 	}
+// }
 
-else {
-	document.body.classList.add('_pc');
-}
+// else {
+// 	document.body.classList.add('_pc');
+// }
 
 const iconMenu = document.querySelector('.menu__icon');
 const iconBody = document.querySelector('.menu__body');
@@ -75,7 +77,7 @@ if (menuLinks.length > 0){
 		const menuLink = e.target;
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
 			
 			if(iconMenu.classList.contains('_active')){
 				document.body.classList.remove('_lock');
